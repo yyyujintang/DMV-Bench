@@ -28,7 +28,7 @@ repository contains:
 DMV-Bench/
 ├── dualmem/             core memory architectures (DualMem + baselines)
 │   ├── agent/          ReAct shopping agent + multi-session runner
-│   ├── baselines/      WorldMM, M2A, MMA, Caption, NoMemory, LongContext
+│   ├── baselines/      WorldMM, M2A, MMA, Caption, NoMemory, ContextOnly
 │   ├── encoders/       SigLIP-2, SBERT, CLIP, DINOv2/v3 encoders
 │   ├── memory/         DualBank, VisualBank, VerbalBank
 │   ├── retrieval/      HybridNormRetriever, TextRetriever, VisualRetriever
@@ -105,7 +105,7 @@ architecture rather than harness drift.
 | System              | Encode               | Retrieve                | Inject       |
 |---------------------|----------------------|-------------------------|--------------|
 | NoMemory            | (none)               | (none)                  | (none)       |
-| LongContext         | encode_text          | full dump               | text         |
+| ContextOnly         | encode_text          | full dump               | text         |
 | Caption             | VLM caption          | SBERT cosine            | text         |
 | WorldMM-lite        | ep+sem+vis modules   | adaptive iterative      | retrieved    |
 | MMA-lite            | semantic store       | reliability-weighted    | text         |
