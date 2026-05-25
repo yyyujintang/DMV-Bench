@@ -1,0 +1,321 @@
+// DMV-Bench data model. All text fields are L2-leakage-controlled.
+// See ../lib/leakage.ts for the forbidden-vocabulary contract.
+//
+// Production: Supabase Postgres (Vercel deploy). For local dev you can
+// point DATABASE_URL at either (a) a Supabase project (a second free
+// project works fine as a dev DB), or (b) a docker-postgres image.
+// See deploy/README.md for setup details.
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id          String            @id @default(cuid())
+  slug        String            @unique
+  display     String
+  description String
+  sortOrder   Int               @default(0)
+  products    Product[]
+  subPages    CategorySubPage[]
+  collections Collection[]
+}
+
+model Product {
+  id          String           @id @default(cuid())
+  category    Category         @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  baseName    String
+  baseDesc    String
+  longDesc    String
+  material    String
+  price       Float                                          // legacy base — per-variant price lives on ProductVariant.price
+  variants    ProductVariant[]
+}
+
+/// A Collection is a (category, tier) grouping of 4 stylistic-sibling
+/// products. Replaces the old "3 same-named Products per category"
+/// surface with a real-shop two-level hierarchy (Category → Collection →
+/// Product). Tier 1 = bold, tier 2 = mid, tier 3 = tonal.
+model Collection {
+  id                 String           @id @default(cuid())
+  slug               String           @unique                      // e.g. "sofas-modern"
+  category           Category         @relation(fields: [categoryId], references: [id])
+  categoryId         String
+  // W7r4 — collection is per-(category, style); `tier` is the display
+  // order (1=modern, 2=minimalist, 3=vintage, 4=industrial). Material
+  // fields are retained for back-compat but blanked.
+  tier               Int
+  styleSlug          String           @default("")                  // "modern" | "minimalist" | "vintage" | "industrial"
+  tierFlavour        String           @default("")
+  materialSlug       String           @default("")
+  materialDescriptor String           @default("")
+  displayName        String                                        // e.g. "Modern Sofa Collection"
+  displayOrder       Int              @default(0)
+  variants           ProductVariant[]
+
+  @@index([categoryId, displayOrder])
+}
+
+model ProductVariant {
+  id                  String           @id @default(cuid())
+  product             Product          @relation(fields: [productId], references: [id])
+  productId           String
+  collection          Collection?      @relation(fields: [collectionId], references: [id])
+  collectionId        String?                                // populated on every variant after the W7 reseed
+  grainTier           Int
+  internalVariantKey  String
+  styleSlug           String           @default("modern")    // modern | minimalist | vintage | industrial
+  colorName           String           @default("")          // e.g. "Tobacco", "Mist"
+  incidentalDetails   String           @default("[]")        // JSON array of detail slugs (V2 §5.3, IC + PD)
+  displayName         String           @default("")          // e.g. "Heirloom Leather Sofa — Tobacco"
+  price               Float            @default(0)           // unique within each (categorySlug)
+  urlHash             String           @unique
+  primaryImage        String
+  galleryImages       String
+  title               String
+  altText             String
+  reviews             Review[]
+  subPages            VariantSubPage[]
+
+  @@index([productId, grainTier])
+  @@index([collectionId])
+}
+
+// ─── NCP sub-pages (Phase W1 of proposal_website.md) ───
+// Each category may be split into 3-6 sub-pages (stylistic / functional /
+// material axes — see proposal_website.md §4.1). Variants are distributed
+// such that visually similar siblings land on DIFFERENT sub-pages, so
+// cross-page navigation becomes memory-load-bearing (NCP, MR2). Categories
+// without sub-pages keep the legacy single-page rendering until W5.
+
+model CategorySubPage {
+  id           String           @id @default(cuid())
+  category     Category         @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  slug         String                                  // e.g. "modern", "vintage"
+  title        String                                  // "Modern", "Vintage" — L2-safe
+  displayOrder Int              @default(0)
+  variants     VariantSubPage[]
+
+  @@unique([categoryId, slug])
+  @@index([categoryId, displayOrder])
+}
+
+model VariantSubPage {
+  variant     ProductVariant   @relation(fields: [variantId], references: [id])
+  variantId   String
+  subPage     CategorySubPage  @relation(fields: [subPageId], references: [id])
+  subPageId   String
+  position    Int              @default(0)             // ordering within the sub-page
+
+  @@id([variantId, subPageId])
+  @@index([subPageId, position])
+}
+
+// ─── Peripheral cues (Phase W3 of proposal_website.md §6) ───
+// A catalogue of reusable visual elements injected into pages at observation
+// time to support mechanism I1 (incidental cue recall). Each cue is a small
+// PNG with a transparent background, rendered as an absolutely-positioned
+// overlay on top of the normal page chrome. Cues never appear in any text
+// (L2 contract): the only way an agent can recall a cue is to have encoded
+// it visually at observation time.
+
+model PeripheralCue {
+  id               String             @id @default(cuid())
+  cueType          String                                    // 'carpet' | 'sticker' | 'badge' | 'background' | 'lighting'
+  cueKey           String             @unique                // 'carpet_checker'
+  visualDescriptor String                                    // human-readable: "woven checker carpet"
+  assetUrl         String                                    // /images/cues/carpet_checker.png
+  defaultPosition  String                                    // 'corner_bl' | 'banner' | 'overlay' | 'badge_tl' | 'background'
+  salienceScore    Float              @default(0.3)          // 0=invisible, 1=screaming
+  taskInjections   TaskCueInjection[]
+}
+
+model TaskCueInjection {
+  id               String         @id @default(cuid())
+  taskId           String                                    // stub until W4 binds it to a ShopSession
+  turnIndex        Int
+  pageId           String                                    // arbitrary id within a task (e.g. urlHash)
+  cue              PeripheralCue  @relation(fields: [cueId], references: [id])
+  cueId            String
+  positionOverride String?                                   // optional override of cue.defaultPosition
+
+  @@index([taskId, turnIndex])
+  @@unique([taskId, turnIndex, pageId, cueId])
+}
+
+// ─── NCP violations log (Phase W2 of proposal_website.md §10) ───
+// Audit pipeline writes one row per detected leak in a recall-mode HTML
+// response. W2 ships the test-harness side (scripts/run-ncp-audit.mjs);
+// W4 adds the per-request runtime hook once sessions exist. sessionId /
+// turnIndex stay nullable until then.
+
+// ─── Shop session + multi-turn (Phase W4 of proposal_website.md §7) ───
+// A session ties a sequence of HTTP requests to a single task instance.
+// The session row stores the per-turn `mode` + `anchorVariantIds` derived
+// from `taskSpec` (a JSON blob whose schema is owned by
+// proposal_tasks.md — W4 ships a permissive stub).
+//
+// Resolution priority for the request's NCP mode:
+//   1. dmv_shop_session_id cookie + session row (highest)
+//   2. ?mode=…&anchors=… URL params (legacy, kept for W1/W2 tests)
+//   3. encoding default
+
+model ShopSession {
+  id               String          @id @default(cuid())
+  taskId           String                                    // free-form; proposal_tasks.md will tighten
+  currentTurn      Int             @default(0)
+  mode             String          @default("encoding")      // 'encoding' | 'recall'
+  anchorVariantIds String          @default("")              // comma-list, written from taskSpec per turn
+  viewHistory      String          @default("[]")            // JSON array of {turn,url,timestamp}
+  rejections       String          @default("[]")            // JSON array of {turn, variantId}
+  wishlist         String          @default("[]")            // JSON array of variantIds
+  taskSpec         String?                                   // JSON blob: full TaskSpec per `lib/session.ts` type
+  createdAt        DateTime        @default(now())
+  endedAt          DateTime?
+  encodingEvents   EncodingEvent[]
+
+  @@index([taskId])
+}
+
+model EncodingEvent {
+  id         String      @id @default(cuid())
+  session    ShopSession @relation(fields: [sessionId], references: [id])
+  sessionId  String
+  turnIndex  Int
+  variantId  String?
+  payload    String                                         // JSON blob — agent-supplied
+  createdAt  DateTime    @default(now())
+
+  @@index([sessionId, turnIndex])
+}
+
+model NcpViolation {
+  id            String   @id @default(cuid())
+  sessionId     String?
+  turnIndex     Int?
+  rule          String                                    // 'MR1' | 'MR2'
+  violationType String                                    // 'anchor_image_visible' | 'anchor_link_visible' | ...
+  description   String
+  renderedUrl   String
+  severity      String                                    // 'critical' | 'warning'
+  createdAt     DateTime @default(now())
+
+  @@index([rule])
+  @@index([createdAt])
+}
+
+model Review {
+  id          String         @id @default(cuid())
+  variant     ProductVariant @relation(fields: [variantId], references: [id])
+  variantId   String
+  rating      Int
+  body        String
+  authorName  String
+  createdAt   DateTime       @default(now())
+}
+
+// ─── Annotation tool (Section 3.2 of annotation_proposal.md) ───
+// SQLite has no UUID[] / TIMESTAMP / VIEW: arrays are stored as comma-separated
+// strings (same convention as ProductVariant.galleryImages), DateTime stands in
+// for TIMESTAMP, and the `task_human_stats` view is computed on demand.
+// Variant ID columns are plain strings (no FK relations) — multiple columns
+// would otherwise need named relations on ProductVariant for every one.
+// `taskId` is a forward-compatible string: the Task model arrives in Phase 4
+// of proposal.md (task generation) and will be linked then.
+
+model AnnotationWorker {
+  id                String                     @id @default(cuid())
+  prolificId        String                     @unique
+  studyId           String
+  sessionId         String?
+  sessionStartedAt  DateTime                   @default(now())
+  sessionEndedAt    DateTime?
+  consentGiven      Boolean                    @default(false)
+  consentGivenAt    DateTime?
+  practiceCompleted Boolean                    @default(false)
+  completionCode    String?
+  status            String                     @default("in_progress")
+  rejectionReason   String?
+  totalDurationMs   Int?
+  trials4afc        Annotation4afc[]
+  trialsMechanism   AnnotationMechanism[]
+  subTaskAttempts   AnnotationSubTaskAttempt[]
+}
+
+/// Per-worker run of one of the 6 sub-tasks (R1/R2/M1/M2/I1/I2) drawn
+/// from the validated pool. Created by /api/annotate/attempt/start and
+/// finalised by /api/annotate/attempt/finish. ShopSession carries the
+/// runtime (mode, anchors, turn pointer); this row carries the outcome.
+model AnnotationSubTaskAttempt {
+  id                   String           @id @default(cuid())
+  worker               AnnotationWorker @relation(fields: [workerId], references: [id])
+  workerId             String
+  subTask              String
+  taskId               String
+  shopSessionId        String           @unique
+
+  startedAt            DateTime         @default(now())
+  finishedAt           DateTime?
+
+  navigationLog        String           @default("[]")
+  finalUrl             String?
+  targetUrl            String
+  acceptedAlternatives String
+  correct              Boolean          @default(false)
+  gaveUp               Boolean          @default(false)
+  totalDurationMs      Int?
+
+  @@index([workerId])
+  @@index([subTask])
+  @@index([taskId])
+}
+
+model Annotation4afc {
+  id                  String           @id @default(cuid())
+  worker              AnnotationWorker @relation(fields: [workerId], references: [id])
+  workerId            String
+  taskId              String?
+  anchorVariantId     String
+  candidateVariantIds String
+  selectedVariantId   String?
+  correct             Boolean
+  grainTier           Int
+  isAttentionCheck    Boolean          @default(false)
+  responseTimeMs      Int
+  createdAt           DateTime         @default(now())
+
+  @@index([workerId])
+  @@index([anchorVariantId])
+  @@index([grainTier])
+}
+
+model AnnotationMechanism {
+  id                     String           @id @default(cuid())
+  worker                 AnnotationWorker @relation(fields: [workerId], references: [id])
+  workerId               String
+  taskId                 String
+  mechanism              String
+  anchorVariantId        String
+  candidateVariantIds    String
+  fillerVariantIds       String?
+  fillerLength           Int?
+  selectedVariantId      String?
+  groundTruthVariantId   String
+  correct                Boolean
+  grainTier              Int
+  anchorViewedDurationMs Int?
+  fillerViewedDurationMs Int?
+  responseTimeMs         Int
+  createdAt              DateTime         @default(now())
+
+  @@index([workerId])
+  @@index([taskId])
+  @@index([mechanism])
+}

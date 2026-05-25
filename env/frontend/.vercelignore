@@ -1,0 +1,22 @@
+# Vercel CLI honours .gitignore by default. This file pins a few extras
+# that aren't in .gitignore but should still skip upload.
+
+# Local SQLite leftover from the pre-Postgres era — not used in production.
+prisma/dev.db
+prisma/dev.db-journal
+
+# Pre-Postgres migration files, kept around for reference only.
+prisma/migrations.sqlite-legacy/
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.vscode/
+
+# Local Prisma build artifacts (postinstall regenerates on Vercel anyway)
+node_modules/.prisma/
+
+# Force-include task pool — needed by build-time script that
+# can't see ../../../tasks/pool/validated/ on Vercel build VM.
+!public/tasks/validated
+!public/tasks/validated/**
