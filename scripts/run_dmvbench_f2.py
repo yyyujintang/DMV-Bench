@@ -17,9 +17,8 @@ import sys
 import time
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
-sys.path.insert(0, str(REPO_ROOT / "VisMem-Diag"))
 
 from tasks.generators.f2_online_ic import generate_f2_chain
 from dualmem.agent.f2_encode_agent import generate_task_trajectories
@@ -36,7 +35,7 @@ DEFAULT_SYSTEMS = "NoMemory,TextOnly,Caption,CoMEM,DualChannel,HYMEM"
 # `F2_TRAJ_DIR`) to isolate, e.g. one cache per VLM:
 #     gemini → f2_trajectories/
 #     qwen   → f2_trajectories_qwen/
-DEFAULT_TRAJ_DIR = (Path(__file__).resolve().parents[2] / "VisMem-Diag" / "data"
+DEFAULT_TRAJ_DIR = (REPO_ROOT / "data"
                     / "vismem_diag_v2" / "f2_trajectories")
 
 
@@ -84,7 +83,7 @@ def main() -> int:
         out_dir = Path(args.out_dir)
     else:
         stamp = time.strftime("%Y%m%d%H%M")
-        out_dir = (REPO_ROOT / "VisMem-Diag" / "exp" / "vismem_diag" / "f2"
+        out_dir = (REPO_ROOT / "results" / "f2"
                    / f"{stamp}_{args.tag}")
     out_dir.mkdir(parents=True, exist_ok=True)
     systems = [s.strip() for s in args.systems.split(",") if s.strip()]

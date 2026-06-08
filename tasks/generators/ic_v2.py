@@ -50,7 +50,7 @@ from ..schema.multisession import MultiSessionTask, SessionRef, save_multi_sessi
 GENERATOR_VERSION = "ic_v2.coord5.relay.v2"
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-CUE_REGISTRY_PATH = REPO_ROOT / "VisMem-Diag" / "data" / "vismem_diag_v2" / "cue_registry.json"
+CUE_REGISTRY_PATH = REPO_ROOT / "data" / "vismem_diag_v2" / "cue_registry.json"
 V2_VAL_POOL = REPO_ROOT / "tasks" / "pool_v2" / "validated"
 V2_MULTI_POOL = REPO_ROOT / "tasks" / "pool_v2" / "multisession"
 

@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Any
 
 REPO = Path(__file__).resolve().parents[2]
-CACHE_ROOT = REPO / "VisMem-Diag" / "data" / "vismem_diag" / "vwa_cache"
+CACHE_ROOT = REPO / "data" / "vismem_diag" / "vwa_cache"
 
 
 class VWASourceProvider:

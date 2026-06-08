@@ -1,0 +1,842 @@
+{
+  "13f2c23f": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/vase/var_a_t1.png"
+  },
+  "77e22195": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/vase/var_b_t1.png"
+  },
+  "296a4563": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/vase/var_c_t1.png"
+  },
+  "cca2e95c": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/vase/var_d_t1.png"
+  },
+  "c2925855": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/vase/var_a_t2.png"
+  },
+  "c5187f5f": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/vase/var_b_t2.png"
+  },
+  "165e0102": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/vase/var_c_t2.png"
+  },
+  "2de5c222": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/vase/var_d_t2.png"
+  },
+  "d390a708": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/vase/var_a_t3.png"
+  },
+  "f711a168": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/vase/var_b_t3.png"
+  },
+  "0061592d": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/vase/var_c_t3.png"
+  },
+  "7b48216f": {
+    "categorySlug": "vases",
+    "noun": "vase",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/vase/var_d_t3.png"
+  },
+  "03b53b93": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/lamp/var_a_t1.png"
+  },
+  "c49a62bb": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/lamp/var_b_t1.png"
+  },
+  "e21ee94f": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/lamp/var_c_t1.png"
+  },
+  "d5d7e922": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/lamp/var_d_t1.png"
+  },
+  "fc1841b2": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/lamp/var_a_t2.png"
+  },
+  "fc900a47": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/lamp/var_b_t2.png"
+  },
+  "54122cb7": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/lamp/var_c_t2.png"
+  },
+  "fdbd9c94": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/lamp/var_d_t2.png"
+  },
+  "a487ccdb": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/lamp/var_a_t3.png"
+  },
+  "41f43185": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/lamp/var_b_t3.png"
+  },
+  "e55991f4": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/lamp/var_c_t3.png"
+  },
+  "e5e28d0b": {
+    "categorySlug": "lamps",
+    "noun": "lamp",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/lamp/var_d_t3.png"
+  },
+  "fed87cca": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/cushion/var_a_t1.png"
+  },
+  "bf54ddfe": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/cushion/var_b_t1.png"
+  },
+  "d0422c58": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/cushion/var_c_t1.png"
+  },
+  "5740b8ce": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/cushion/var_d_t1.png"
+  },
+  "1a8d5904": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/cushion/var_a_t2.png"
+  },
+  "24e5c09d": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/cushion/var_b_t2.png"
+  },
+  "a5f2cac6": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/cushion/var_c_t2.png"
+  },
+  "87163f92": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/cushion/var_d_t2.png"
+  },
+  "afa8fee5": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/cushion/var_a_t3.png"
+  },
+  "6d1f2a86": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/cushion/var_b_t3.png"
+  },
+  "289b29a8": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/cushion/var_c_t3.png"
+  },
+  "9e451881": {
+    "categorySlug": "cushions",
+    "noun": "cushion",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/cushion/var_d_t3.png"
+  },
+  "37de2f75": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/chair/var_a_t1.png"
+  },
+  "2401557c": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/chair/var_b_t1.png"
+  },
+  "b76d7e17": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/chair/var_c_t1.png"
+  },
+  "ae9b6890": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/chair/var_d_t1.png"
+  },
+  "fbd48b89": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/chair/var_a_t2.png"
+  },
+  "f0a7466e": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/chair/var_b_t2.png"
+  },
+  "2e727cd2": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/chair/var_c_t2.png"
+  },
+  "ec94c692": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/chair/var_d_t2.png"
+  },
+  "6b477857": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/chair/var_a_t3.png"
+  },
+  "bc6f5b70": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/chair/var_b_t3.png"
+  },
+  "d0d8b36c": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/chair/var_c_t3.png"
+  },
+  "3459bcdb": {
+    "categorySlug": "chairs",
+    "noun": "chair",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/chair/var_d_t3.png"
+  },
+  "7574d596": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/rug/var_a_t1.png"
+  },
+  "ec08177a": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/rug/var_b_t1.png"
+  },
+  "6463b001": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/rug/var_c_t1.png"
+  },
+  "242f7049": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/rug/var_d_t1.png"
+  },
+  "6082c506": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/rug/var_a_t2.png"
+  },
+  "1b86c9ae": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/rug/var_b_t2.png"
+  },
+  "47267617": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/rug/var_c_t2.png"
+  },
+  "1ab77a92": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/rug/var_d_t2.png"
+  },
+  "352ba9b6": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/rug/var_a_t3.png"
+  },
+  "75a9ff5d": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/rug/var_b_t3.png"
+  },
+  "72b1eccd": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/rug/var_c_t3.png"
+  },
+  "84dc93ad": {
+    "categorySlug": "rugs",
+    "noun": "rug",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/rug/var_d_t3.png"
+  },
+  "4f981c85": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/table/var_a_t1.png"
+  },
+  "73171b5b": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/table/var_b_t1.png"
+  },
+  "ea131de1": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/table/var_c_t1.png"
+  },
+  "c6b9d5c6": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/table/var_d_t1.png"
+  },
+  "f836c098": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/table/var_a_t2.png"
+  },
+  "1f441d6f": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/table/var_b_t2.png"
+  },
+  "00b6fd9e": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/table/var_c_t2.png"
+  },
+  "8407ea0c": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/table/var_d_t2.png"
+  },
+  "20be0a3b": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/table/var_a_t3.png"
+  },
+  "30bbc1d8": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/table/var_b_t3.png"
+  },
+  "e6f7e268": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/table/var_c_t3.png"
+  },
+  "91890824": {
+    "categorySlug": "tables",
+    "noun": "side table",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/table/var_d_t3.png"
+  },
+  "0b53335a": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/sofa/var_a_t1.png"
+  },
+  "e7ef715c": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/sofa/var_b_t1.png"
+  },
+  "af6bc34a": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/sofa/var_c_t1.png"
+  },
+  "cbdd5055": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/sofa/var_d_t1.png"
+  },
+  "3f99ffb0": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/sofa/var_a_t2.png"
+  },
+  "00356b2f": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/sofa/var_b_t2.png"
+  },
+  "90a6c396": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/sofa/var_c_t2.png"
+  },
+  "b22f69ac": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/sofa/var_d_t2.png"
+  },
+  "4b96e08c": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/sofa/var_a_t3.png"
+  },
+  "28a4f0f8": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/sofa/var_b_t3.png"
+  },
+  "60dd0611": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/sofa/var_c_t3.png"
+  },
+  "201e766f": {
+    "categorySlug": "sofas",
+    "noun": "sofa",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/sofa/var_d_t3.png"
+  },
+  "f143bb95": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/bookshelf/var_a_t1.png"
+  },
+  "6b77d7d8": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/bookshelf/var_b_t1.png"
+  },
+  "32af6cbf": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/bookshelf/var_c_t1.png"
+  },
+  "11aae6db": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/bookshelf/var_d_t1.png"
+  },
+  "00c3c17d": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/bookshelf/var_a_t2.png"
+  },
+  "435c0f7a": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/bookshelf/var_b_t2.png"
+  },
+  "b7e09841": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/bookshelf/var_c_t2.png"
+  },
+  "fab2f51a": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/bookshelf/var_d_t2.png"
+  },
+  "206d0e86": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/bookshelf/var_a_t3.png"
+  },
+  "996d2457": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/bookshelf/var_b_t3.png"
+  },
+  "d8258a2e": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/bookshelf/var_c_t3.png"
+  },
+  "1a0dfcf5": {
+    "categorySlug": "bookshelves",
+    "noun": "bookshelf",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/bookshelf/var_d_t3.png"
+  },
+  "68317101": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/wall_art/var_a_t1.png"
+  },
+  "682384bd": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/wall_art/var_b_t1.png"
+  },
+  "e4bfcfac": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/wall_art/var_c_t1.png"
+  },
+  "a671de19": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/wall_art/var_d_t1.png"
+  },
+  "6e805c5a": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/wall_art/var_a_t2.png"
+  },
+  "e8ee9866": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/wall_art/var_b_t2.png"
+  },
+  "04a481e8": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/wall_art/var_c_t2.png"
+  },
+  "0c5dd8ce": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/wall_art/var_d_t2.png"
+  },
+  "3c9330b5": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/wall_art/var_a_t3.png"
+  },
+  "ff524045": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/wall_art/var_b_t3.png"
+  },
+  "2a9120d5": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/wall_art/var_c_t3.png"
+  },
+  "cbdc8897": {
+    "categorySlug": "wall_art",
+    "noun": "wall print",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/wall_art/var_d_t3.png"
+  },
+  "6d12ae89": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "modern",
+    "color": "caramel",
+    "imagePath": "/images/plant_pot/var_a_t1.png"
+  },
+  "1063626b": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "minimalist",
+    "color": "ivory",
+    "imagePath": "/images/plant_pot/var_b_t1.png"
+  },
+  "b44adbe9": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "vintage",
+    "color": "tobacco",
+    "imagePath": "/images/plant_pot/var_c_t1.png"
+  },
+  "0d275500": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "industrial",
+    "color": "charcoal",
+    "imagePath": "/images/plant_pot/var_d_t1.png"
+  },
+  "060f8e8b": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "modern",
+    "color": "sage",
+    "imagePath": "/images/plant_pot/var_a_t2.png"
+  },
+  "bd2932e7": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "minimalist",
+    "color": "dove",
+    "imagePath": "/images/plant_pot/var_b_t2.png"
+  },
+  "f8e3f095": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "vintage",
+    "color": "burgundy",
+    "imagePath": "/images/plant_pot/var_c_t2.png"
+  },
+  "702a27cd": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "industrial",
+    "color": "slate",
+    "imagePath": "/images/plant_pot/var_d_t2.png"
+  },
+  "e1529320": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "modern",
+    "color": "bone",
+    "imagePath": "/images/plant_pot/var_a_t3.png"
+  },
+  "6ba8a24b": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "minimalist",
+    "color": "mist",
+    "imagePath": "/images/plant_pot/var_b_t3.png"
+  },
+  "f986afb5": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "vintage",
+    "color": "plum",
+    "imagePath": "/images/plant_pot/var_c_t3.png"
+  },
+  "be11e3e2": {
+    "categorySlug": "plant_pots",
+    "noun": "plant pot",
+    "style": "industrial",
+    "color": "olive",
+    "imagePath": "/images/plant_pot/var_d_t3.png"
+  }
+}

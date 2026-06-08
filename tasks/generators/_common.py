@@ -23,8 +23,8 @@ from pathlib import Path
 from typing import Iterable, Optional
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SEED_PATH = REPO_ROOT / "VisMem-Diag" / "env" / "scripts" / "seed.json"
-PRICING_PATH = REPO_ROOT / "VisMem-Diag" / "env" / "scripts" / "pricing_naming.json"
+SEED_PATH = REPO_ROOT / "env" / "scripts" / "seed.json"
+PRICING_PATH = REPO_ROOT / "env" / "scripts" / "pricing_naming.json"
 
 VAR_KEY_TO_STYLE = {
     "var_a": "modern",

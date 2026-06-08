@@ -1,0 +1,3714 @@
+{
+  "categories": [
+    {
+      "slug": "vases",
+      "display": "Vases",
+      "description": "Browse our vases for modern interiors.",
+      "sortOrder": 0,
+      "products": [
+        {
+          "baseName": "Modern Vase",
+          "baseDesc": "A vase sized for everyday living.",
+          "longDesc": "A vase from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with matte ceramic; sized for everyday rooms.",
+          "material": "matte ceramic",
+          "price": 79.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "13f2c23f",
+              "primaryImage": "/images/vase/var_a_t1.png",
+              "galleryImages": [
+                "/images/vase/var_a_t1.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "77e22195",
+              "primaryImage": "/images/vase/var_b_t1.png",
+              "galleryImages": [
+                "/images/vase/var_b_t1.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "296a4563",
+              "primaryImage": "/images/vase/var_c_t1.png",
+              "galleryImages": [
+                "/images/vase/var_c_t1.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "cca2e95c",
+              "primaryImage": "/images/vase/var_d_t1.png",
+              "galleryImages": [
+                "/images/vase/var_d_t1.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Vase",
+          "baseDesc": "A vase sized for everyday living.",
+          "longDesc": "A vase from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with matte ceramic; sized for everyday rooms.",
+          "material": "matte ceramic",
+          "price": 79.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "c2925855",
+              "primaryImage": "/images/vase/var_a_t2.png",
+              "galleryImages": [
+                "/images/vase/var_a_t2.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "c5187f5f",
+              "primaryImage": "/images/vase/var_b_t2.png",
+              "galleryImages": [
+                "/images/vase/var_b_t2.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "165e0102",
+              "primaryImage": "/images/vase/var_c_t2.png",
+              "galleryImages": [
+                "/images/vase/var_c_t2.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "2de5c222",
+              "primaryImage": "/images/vase/var_d_t2.png",
+              "galleryImages": [
+                "/images/vase/var_d_t2.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Vase",
+          "baseDesc": "A vase sized for everyday living.",
+          "longDesc": "A vase from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with matte ceramic; sized for everyday rooms.",
+          "material": "matte ceramic",
+          "price": 79.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "d390a708",
+              "primaryImage": "/images/vase/var_a_t3.png",
+              "galleryImages": [
+                "/images/vase/var_a_t3.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "f711a168",
+              "primaryImage": "/images/vase/var_b_t3.png",
+              "galleryImages": [
+                "/images/vase/var_b_t3.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "0061592d",
+              "primaryImage": "/images/vase/var_c_t3.png",
+              "galleryImages": [
+                "/images/vase/var_c_t3.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "7b48216f",
+              "primaryImage": "/images/vase/var_d_t3.png",
+              "galleryImages": [
+                "/images/vase/var_d_t3.png"
+              ],
+              "title": "Modern Vase",
+              "altText": "Modern Vase",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lamps",
+      "display": "Lamps",
+      "description": "Browse our lamps for modern interiors.",
+      "sortOrder": 1,
+      "products": [
+        {
+          "baseName": "Studio Table Lamp",
+          "baseDesc": "A lamp sized for everyday living.",
+          "longDesc": "A lamp from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric shade, metal base; sized for everyday rooms.",
+          "material": "fabric shade, metal base",
+          "price": 129.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "03b53b93",
+              "primaryImage": "/images/lamp/var_a_t1.png",
+              "galleryImages": [
+                "/images/lamp/var_a_t1.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "c49a62bb",
+              "primaryImage": "/images/lamp/var_b_t1.png",
+              "galleryImages": [
+                "/images/lamp/var_b_t1.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "e21ee94f",
+              "primaryImage": "/images/lamp/var_c_t1.png",
+              "galleryImages": [
+                "/images/lamp/var_c_t1.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "d5d7e922",
+              "primaryImage": "/images/lamp/var_d_t1.png",
+              "galleryImages": [
+                "/images/lamp/var_d_t1.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Studio Table Lamp",
+          "baseDesc": "A lamp sized for everyday living.",
+          "longDesc": "A lamp from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric shade, metal base; sized for everyday rooms.",
+          "material": "fabric shade, metal base",
+          "price": 129.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "fc1841b2",
+              "primaryImage": "/images/lamp/var_a_t2.png",
+              "galleryImages": [
+                "/images/lamp/var_a_t2.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "fc900a47",
+              "primaryImage": "/images/lamp/var_b_t2.png",
+              "galleryImages": [
+                "/images/lamp/var_b_t2.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "54122cb7",
+              "primaryImage": "/images/lamp/var_c_t2.png",
+              "galleryImages": [
+                "/images/lamp/var_c_t2.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "fdbd9c94",
+              "primaryImage": "/images/lamp/var_d_t2.png",
+              "galleryImages": [
+                "/images/lamp/var_d_t2.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Studio Table Lamp",
+          "baseDesc": "A lamp sized for everyday living.",
+          "longDesc": "A lamp from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric shade, metal base; sized for everyday rooms.",
+          "material": "fabric shade, metal base",
+          "price": 129.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "a487ccdb",
+              "primaryImage": "/images/lamp/var_a_t3.png",
+              "galleryImages": [
+                "/images/lamp/var_a_t3.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "41f43185",
+              "primaryImage": "/images/lamp/var_b_t3.png",
+              "galleryImages": [
+                "/images/lamp/var_b_t3.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "e55991f4",
+              "primaryImage": "/images/lamp/var_c_t3.png",
+              "galleryImages": [
+                "/images/lamp/var_c_t3.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "e5e28d0b",
+              "primaryImage": "/images/lamp/var_d_t3.png",
+              "galleryImages": [
+                "/images/lamp/var_d_t3.png"
+              ],
+              "title": "Studio Table Lamp",
+              "altText": "Studio Table Lamp",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cushions",
+      "display": "Cushions",
+      "description": "Browse our cushions for modern interiors.",
+      "sortOrder": 2,
+      "products": [
+        {
+          "baseName": "Modern Throw Cushion",
+          "baseDesc": "A cushion sized for everyday living.",
+          "longDesc": "A cushion from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with woven fabric cover; sized for everyday rooms.",
+          "material": "woven fabric cover",
+          "price": 49.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "fed87cca",
+              "primaryImage": "/images/cushion/var_a_t1.png",
+              "galleryImages": [
+                "/images/cushion/var_a_t1.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "bf54ddfe",
+              "primaryImage": "/images/cushion/var_b_t1.png",
+              "galleryImages": [
+                "/images/cushion/var_b_t1.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "d0422c58",
+              "primaryImage": "/images/cushion/var_c_t1.png",
+              "galleryImages": [
+                "/images/cushion/var_c_t1.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "5740b8ce",
+              "primaryImage": "/images/cushion/var_d_t1.png",
+              "galleryImages": [
+                "/images/cushion/var_d_t1.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Throw Cushion",
+          "baseDesc": "A cushion sized for everyday living.",
+          "longDesc": "A cushion from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with woven fabric cover; sized for everyday rooms.",
+          "material": "woven fabric cover",
+          "price": 49.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "1a8d5904",
+              "primaryImage": "/images/cushion/var_a_t2.png",
+              "galleryImages": [
+                "/images/cushion/var_a_t2.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "24e5c09d",
+              "primaryImage": "/images/cushion/var_b_t2.png",
+              "galleryImages": [
+                "/images/cushion/var_b_t2.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "a5f2cac6",
+              "primaryImage": "/images/cushion/var_c_t2.png",
+              "galleryImages": [
+                "/images/cushion/var_c_t2.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "87163f92",
+              "primaryImage": "/images/cushion/var_d_t2.png",
+              "galleryImages": [
+                "/images/cushion/var_d_t2.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Throw Cushion",
+          "baseDesc": "A cushion sized for everyday living.",
+          "longDesc": "A cushion from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with woven fabric cover; sized for everyday rooms.",
+          "material": "woven fabric cover",
+          "price": 49.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "afa8fee5",
+              "primaryImage": "/images/cushion/var_a_t3.png",
+              "galleryImages": [
+                "/images/cushion/var_a_t3.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "6d1f2a86",
+              "primaryImage": "/images/cushion/var_b_t3.png",
+              "galleryImages": [
+                "/images/cushion/var_b_t3.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "289b29a8",
+              "primaryImage": "/images/cushion/var_c_t3.png",
+              "galleryImages": [
+                "/images/cushion/var_c_t3.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "9e451881",
+              "primaryImage": "/images/cushion/var_d_t3.png",
+              "galleryImages": [
+                "/images/cushion/var_d_t3.png"
+              ],
+              "title": "Modern Throw Cushion",
+              "altText": "Modern Throw Cushion",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "chairs",
+      "display": "Chairs",
+      "description": "Browse our chairs for modern interiors.",
+      "sortOrder": 3,
+      "products": [
+        {
+          "baseName": "Modern Accent Chair",
+          "baseDesc": "A armchair sized for everyday living.",
+          "longDesc": "A armchair from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery; sized for everyday rooms.",
+          "material": "fabric upholstery",
+          "price": 489.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "37de2f75",
+              "primaryImage": "/images/chair/var_a_t1.png",
+              "galleryImages": [
+                "/images/chair/var_a_t1.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "2401557c",
+              "primaryImage": "/images/chair/var_b_t1.png",
+              "galleryImages": [
+                "/images/chair/var_b_t1.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "b76d7e17",
+              "primaryImage": "/images/chair/var_c_t1.png",
+              "galleryImages": [
+                "/images/chair/var_c_t1.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "ae9b6890",
+              "primaryImage": "/images/chair/var_d_t1.png",
+              "galleryImages": [
+                "/images/chair/var_d_t1.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Accent Chair",
+          "baseDesc": "A armchair sized for everyday living.",
+          "longDesc": "A armchair from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery; sized for everyday rooms.",
+          "material": "fabric upholstery",
+          "price": 489.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "fbd48b89",
+              "primaryImage": "/images/chair/var_a_t2.png",
+              "galleryImages": [
+                "/images/chair/var_a_t2.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "f0a7466e",
+              "primaryImage": "/images/chair/var_b_t2.png",
+              "galleryImages": [
+                "/images/chair/var_b_t2.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "2e727cd2",
+              "primaryImage": "/images/chair/var_c_t2.png",
+              "galleryImages": [
+                "/images/chair/var_c_t2.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "ec94c692",
+              "primaryImage": "/images/chair/var_d_t2.png",
+              "galleryImages": [
+                "/images/chair/var_d_t2.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Accent Chair",
+          "baseDesc": "A armchair sized for everyday living.",
+          "longDesc": "A armchair from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery; sized for everyday rooms.",
+          "material": "fabric upholstery",
+          "price": 489.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "6b477857",
+              "primaryImage": "/images/chair/var_a_t3.png",
+              "galleryImages": [
+                "/images/chair/var_a_t3.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "bc6f5b70",
+              "primaryImage": "/images/chair/var_b_t3.png",
+              "galleryImages": [
+                "/images/chair/var_b_t3.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "d0d8b36c",
+              "primaryImage": "/images/chair/var_c_t3.png",
+              "galleryImages": [
+                "/images/chair/var_c_t3.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "3459bcdb",
+              "primaryImage": "/images/chair/var_d_t3.png",
+              "galleryImages": [
+                "/images/chair/var_d_t3.png"
+              ],
+              "title": "Modern Accent Chair",
+              "altText": "Modern Accent Chair",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rugs",
+      "display": "Rugs",
+      "description": "Browse our rugs for modern interiors.",
+      "sortOrder": 4,
+      "products": [
+        {
+          "baseName": "Modern Area Rug",
+          "baseDesc": "A area rug sized for everyday living.",
+          "longDesc": "A area rug from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with low-pile fabric; sized for everyday rooms.",
+          "material": "low-pile fabric",
+          "price": 299.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "7574d596",
+              "primaryImage": "/images/rug/var_a_t1.png",
+              "galleryImages": [
+                "/images/rug/var_a_t1.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "ec08177a",
+              "primaryImage": "/images/rug/var_b_t1.png",
+              "galleryImages": [
+                "/images/rug/var_b_t1.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "6463b001",
+              "primaryImage": "/images/rug/var_c_t1.png",
+              "galleryImages": [
+                "/images/rug/var_c_t1.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "242f7049",
+              "primaryImage": "/images/rug/var_d_t1.png",
+              "galleryImages": [
+                "/images/rug/var_d_t1.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Area Rug",
+          "baseDesc": "A area rug sized for everyday living.",
+          "longDesc": "A area rug from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with low-pile fabric; sized for everyday rooms.",
+          "material": "low-pile fabric",
+          "price": 299.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "6082c506",
+              "primaryImage": "/images/rug/var_a_t2.png",
+              "galleryImages": [
+                "/images/rug/var_a_t2.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "1b86c9ae",
+              "primaryImage": "/images/rug/var_b_t2.png",
+              "galleryImages": [
+                "/images/rug/var_b_t2.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "47267617",
+              "primaryImage": "/images/rug/var_c_t2.png",
+              "galleryImages": [
+                "/images/rug/var_c_t2.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "1ab77a92",
+              "primaryImage": "/images/rug/var_d_t2.png",
+              "galleryImages": [
+                "/images/rug/var_d_t2.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Area Rug",
+          "baseDesc": "A area rug sized for everyday living.",
+          "longDesc": "A area rug from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with low-pile fabric; sized for everyday rooms.",
+          "material": "low-pile fabric",
+          "price": 299.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "352ba9b6",
+              "primaryImage": "/images/rug/var_a_t3.png",
+              "galleryImages": [
+                "/images/rug/var_a_t3.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "75a9ff5d",
+              "primaryImage": "/images/rug/var_b_t3.png",
+              "galleryImages": [
+                "/images/rug/var_b_t3.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "72b1eccd",
+              "primaryImage": "/images/rug/var_c_t3.png",
+              "galleryImages": [
+                "/images/rug/var_c_t3.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "84dc93ad",
+              "primaryImage": "/images/rug/var_d_t3.png",
+              "galleryImages": [
+                "/images/rug/var_d_t3.png"
+              ],
+              "title": "Modern Area Rug",
+              "altText": "Modern Area Rug",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tables",
+      "display": "Tables",
+      "description": "Browse our tables for modern interiors.",
+      "sortOrder": 5,
+      "products": [
+        {
+          "baseName": "Modern Side Table",
+          "baseDesc": "A side table sized for everyday living.",
+          "longDesc": "A side table from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with wood top, metal legs; sized for everyday rooms.",
+          "material": "wood top, metal legs",
+          "price": 199.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "4f981c85",
+              "primaryImage": "/images/table/var_a_t1.png",
+              "galleryImages": [
+                "/images/table/var_a_t1.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "73171b5b",
+              "primaryImage": "/images/table/var_b_t1.png",
+              "galleryImages": [
+                "/images/table/var_b_t1.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "ea131de1",
+              "primaryImage": "/images/table/var_c_t1.png",
+              "galleryImages": [
+                "/images/table/var_c_t1.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "c6b9d5c6",
+              "primaryImage": "/images/table/var_d_t1.png",
+              "galleryImages": [
+                "/images/table/var_d_t1.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Side Table",
+          "baseDesc": "A side table sized for everyday living.",
+          "longDesc": "A side table from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with wood top, metal legs; sized for everyday rooms.",
+          "material": "wood top, metal legs",
+          "price": 199.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "f836c098",
+              "primaryImage": "/images/table/var_a_t2.png",
+              "galleryImages": [
+                "/images/table/var_a_t2.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "1f441d6f",
+              "primaryImage": "/images/table/var_b_t2.png",
+              "galleryImages": [
+                "/images/table/var_b_t2.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "00b6fd9e",
+              "primaryImage": "/images/table/var_c_t2.png",
+              "galleryImages": [
+                "/images/table/var_c_t2.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "8407ea0c",
+              "primaryImage": "/images/table/var_d_t2.png",
+              "galleryImages": [
+                "/images/table/var_d_t2.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Side Table",
+          "baseDesc": "A side table sized for everyday living.",
+          "longDesc": "A side table from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with wood top, metal legs; sized for everyday rooms.",
+          "material": "wood top, metal legs",
+          "price": 199.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "20be0a3b",
+              "primaryImage": "/images/table/var_a_t3.png",
+              "galleryImages": [
+                "/images/table/var_a_t3.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "30bbc1d8",
+              "primaryImage": "/images/table/var_b_t3.png",
+              "galleryImages": [
+                "/images/table/var_b_t3.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "e6f7e268",
+              "primaryImage": "/images/table/var_c_t3.png",
+              "galleryImages": [
+                "/images/table/var_c_t3.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "91890824",
+              "primaryImage": "/images/table/var_d_t3.png",
+              "galleryImages": [
+                "/images/table/var_d_t3.png"
+              ],
+              "title": "Modern Side Table",
+              "altText": "Modern Side Table",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "plant_pots",
+      "display": "Plant Pots",
+      "description": "Browse our plant pots for modern interiors.",
+      "sortOrder": 6,
+      "products": [
+        {
+          "baseName": "Modern Plant Pot",
+          "baseDesc": "A plant pot sized for everyday living.",
+          "longDesc": "A plant pot from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with glazed ceramic; sized for everyday rooms.",
+          "material": "glazed ceramic",
+          "price": 39.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "6d12ae89",
+              "primaryImage": "/images/plant_pot/var_a_t1.png",
+              "galleryImages": [
+                "/images/plant_pot/var_a_t1.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "1063626b",
+              "primaryImage": "/images/plant_pot/var_b_t1.png",
+              "galleryImages": [
+                "/images/plant_pot/var_b_t1.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "b44adbe9",
+              "primaryImage": "/images/plant_pot/var_c_t1.png",
+              "galleryImages": [
+                "/images/plant_pot/var_c_t1.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "0d275500",
+              "primaryImage": "/images/plant_pot/var_d_t1.png",
+              "galleryImages": [
+                "/images/plant_pot/var_d_t1.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Plant Pot",
+          "baseDesc": "A plant pot sized for everyday living.",
+          "longDesc": "A plant pot from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with glazed ceramic; sized for everyday rooms.",
+          "material": "glazed ceramic",
+          "price": 39.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "060f8e8b",
+              "primaryImage": "/images/plant_pot/var_a_t2.png",
+              "galleryImages": [
+                "/images/plant_pot/var_a_t2.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "bd2932e7",
+              "primaryImage": "/images/plant_pot/var_b_t2.png",
+              "galleryImages": [
+                "/images/plant_pot/var_b_t2.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "f8e3f095",
+              "primaryImage": "/images/plant_pot/var_c_t2.png",
+              "galleryImages": [
+                "/images/plant_pot/var_c_t2.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "702a27cd",
+              "primaryImage": "/images/plant_pot/var_d_t2.png",
+              "galleryImages": [
+                "/images/plant_pot/var_d_t2.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Plant Pot",
+          "baseDesc": "A plant pot sized for everyday living.",
+          "longDesc": "A plant pot from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with glazed ceramic; sized for everyday rooms.",
+          "material": "glazed ceramic",
+          "price": 39.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "e1529320",
+              "primaryImage": "/images/plant_pot/var_a_t3.png",
+              "galleryImages": [
+                "/images/plant_pot/var_a_t3.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "6ba8a24b",
+              "primaryImage": "/images/plant_pot/var_b_t3.png",
+              "galleryImages": [
+                "/images/plant_pot/var_b_t3.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "f986afb5",
+              "primaryImage": "/images/plant_pot/var_c_t3.png",
+              "galleryImages": [
+                "/images/plant_pot/var_c_t3.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "be11e3e2",
+              "primaryImage": "/images/plant_pot/var_d_t3.png",
+              "galleryImages": [
+                "/images/plant_pot/var_d_t3.png"
+              ],
+              "title": "Modern Plant Pot",
+              "altText": "Modern Plant Pot",
+              "reviews": [
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "wall_art",
+      "display": "Wall Art",
+      "description": "Browse our wall art for modern interiors.",
+      "sortOrder": 7,
+      "products": [
+        {
+          "baseName": "Modern Wall Art Print",
+          "baseDesc": "A framed print sized for everyday living.",
+          "longDesc": "A framed print from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with canvas with wooden frame; sized for everyday rooms.",
+          "material": "canvas with wooden frame",
+          "price": 89.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "68317101",
+              "primaryImage": "/images/wall_art/var_a_t1.png",
+              "galleryImages": [
+                "/images/wall_art/var_a_t1.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "682384bd",
+              "primaryImage": "/images/wall_art/var_b_t1.png",
+              "galleryImages": [
+                "/images/wall_art/var_b_t1.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "e4bfcfac",
+              "primaryImage": "/images/wall_art/var_c_t1.png",
+              "galleryImages": [
+                "/images/wall_art/var_c_t1.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "a671de19",
+              "primaryImage": "/images/wall_art/var_d_t1.png",
+              "galleryImages": [
+                "/images/wall_art/var_d_t1.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Wall Art Print",
+          "baseDesc": "A framed print sized for everyday living.",
+          "longDesc": "A framed print from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with canvas with wooden frame; sized for everyday rooms.",
+          "material": "canvas with wooden frame",
+          "price": 89.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "6e805c5a",
+              "primaryImage": "/images/wall_art/var_a_t2.png",
+              "galleryImages": [
+                "/images/wall_art/var_a_t2.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "e8ee9866",
+              "primaryImage": "/images/wall_art/var_b_t2.png",
+              "galleryImages": [
+                "/images/wall_art/var_b_t2.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "04a481e8",
+              "primaryImage": "/images/wall_art/var_c_t2.png",
+              "galleryImages": [
+                "/images/wall_art/var_c_t2.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "0c5dd8ce",
+              "primaryImage": "/images/wall_art/var_d_t2.png",
+              "galleryImages": [
+                "/images/wall_art/var_d_t2.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Wall Art Print",
+          "baseDesc": "A framed print sized for everyday living.",
+          "longDesc": "A framed print from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with canvas with wooden frame; sized for everyday rooms.",
+          "material": "canvas with wooden frame",
+          "price": 89.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "3c9330b5",
+              "primaryImage": "/images/wall_art/var_a_t3.png",
+              "galleryImages": [
+                "/images/wall_art/var_a_t3.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "ff524045",
+              "primaryImage": "/images/wall_art/var_b_t3.png",
+              "galleryImages": [
+                "/images/wall_art/var_b_t3.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "2a9120d5",
+              "primaryImage": "/images/wall_art/var_c_t3.png",
+              "galleryImages": [
+                "/images/wall_art/var_c_t3.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "cbdc8897",
+              "primaryImage": "/images/wall_art/var_d_t3.png",
+              "galleryImages": [
+                "/images/wall_art/var_d_t3.png"
+              ],
+              "title": "Modern Wall Art Print",
+              "altText": "Modern Wall Art Print",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sofas",
+      "display": "Sofas",
+      "description": "Browse our sofas for modern interiors.",
+      "sortOrder": 8,
+      "products": [
+        {
+          "baseName": "Modern Living Sofa",
+          "baseDesc": "A sofa sized for everyday living.",
+          "longDesc": "A sofa from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery, wood legs; sized for everyday rooms.",
+          "material": "fabric upholstery, wood legs",
+          "price": 1299.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "0b53335a",
+              "primaryImage": "/images/sofa/var_a_t1.png",
+              "galleryImages": [
+                "/images/sofa/var_a_t1.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "e7ef715c",
+              "primaryImage": "/images/sofa/var_b_t1.png",
+              "galleryImages": [
+                "/images/sofa/var_b_t1.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "af6bc34a",
+              "primaryImage": "/images/sofa/var_c_t1.png",
+              "galleryImages": [
+                "/images/sofa/var_c_t1.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "cbdd5055",
+              "primaryImage": "/images/sofa/var_d_t1.png",
+              "galleryImages": [
+                "/images/sofa/var_d_t1.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Living Sofa",
+          "baseDesc": "A sofa sized for everyday living.",
+          "longDesc": "A sofa from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery, wood legs; sized for everyday rooms.",
+          "material": "fabric upholstery, wood legs",
+          "price": 1299.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "3f99ffb0",
+              "primaryImage": "/images/sofa/var_a_t2.png",
+              "galleryImages": [
+                "/images/sofa/var_a_t2.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "00356b2f",
+              "primaryImage": "/images/sofa/var_b_t2.png",
+              "galleryImages": [
+                "/images/sofa/var_b_t2.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "90a6c396",
+              "primaryImage": "/images/sofa/var_c_t2.png",
+              "galleryImages": [
+                "/images/sofa/var_c_t2.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "b22f69ac",
+              "primaryImage": "/images/sofa/var_d_t2.png",
+              "galleryImages": [
+                "/images/sofa/var_d_t2.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Living Sofa",
+          "baseDesc": "A sofa sized for everyday living.",
+          "longDesc": "A sofa from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with fabric upholstery, wood legs; sized for everyday rooms.",
+          "material": "fabric upholstery, wood legs",
+          "price": 1299.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "4b96e08c",
+              "primaryImage": "/images/sofa/var_a_t3.png",
+              "galleryImages": [
+                "/images/sofa/var_a_t3.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "28a4f0f8",
+              "primaryImage": "/images/sofa/var_b_t3.png",
+              "galleryImages": [
+                "/images/sofa/var_b_t3.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "60dd0611",
+              "primaryImage": "/images/sofa/var_c_t3.png",
+              "galleryImages": [
+                "/images/sofa/var_c_t3.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "201e766f",
+              "primaryImage": "/images/sofa/var_d_t3.png",
+              "galleryImages": [
+                "/images/sofa/var_d_t3.png"
+              ],
+              "title": "Modern Living Sofa",
+              "altText": "Modern Living Sofa",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bookshelves",
+      "display": "Bookshelves",
+      "description": "Browse our bookshelves for modern interiors.",
+      "sortOrder": 9,
+      "products": [
+        {
+          "baseName": "Modern Bookshelf",
+          "baseDesc": "A bookshelf sized for everyday living.",
+          "longDesc": "A bookshelf from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with engineered wood, metal frame; sized for everyday rooms.",
+          "material": "engineered wood, metal frame",
+          "price": 349.0,
+          "variants": [
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_a",
+              "urlHash": "f143bb95",
+              "primaryImage": "/images/bookshelf/var_a_t1.png",
+              "galleryImages": [
+                "/images/bookshelf/var_a_t1.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_b",
+              "urlHash": "6b77d7d8",
+              "primaryImage": "/images/bookshelf/var_b_t1.png",
+              "galleryImages": [
+                "/images/bookshelf/var_b_t1.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_c",
+              "urlHash": "32af6cbf",
+              "primaryImage": "/images/bookshelf/var_c_t1.png",
+              "galleryImages": [
+                "/images/bookshelf/var_c_t1.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 1,
+              "internalVariantKey": "var_d",
+              "urlHash": "11aae6db",
+              "primaryImage": "/images/bookshelf/var_d_t1.png",
+              "galleryImages": [
+                "/images/bookshelf/var_d_t1.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Bookshelf",
+          "baseDesc": "A bookshelf sized for everyday living.",
+          "longDesc": "A bookshelf from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with engineered wood, metal frame; sized for everyday rooms.",
+          "material": "engineered wood, metal frame",
+          "price": 349.0,
+          "variants": [
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_a",
+              "urlHash": "00c3c17d",
+              "primaryImage": "/images/bookshelf/var_a_t2.png",
+              "galleryImages": [
+                "/images/bookshelf/var_a_t2.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_b",
+              "urlHash": "435c0f7a",
+              "primaryImage": "/images/bookshelf/var_b_t2.png",
+              "galleryImages": [
+                "/images/bookshelf/var_b_t2.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_c",
+              "urlHash": "b7e09841",
+              "primaryImage": "/images/bookshelf/var_c_t2.png",
+              "galleryImages": [
+                "/images/bookshelf/var_c_t2.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                }
+              ]
+            },
+            {
+              "grainTier": 2,
+              "internalVariantKey": "var_d",
+              "urlHash": "fab2f51a",
+              "primaryImage": "/images/bookshelf/var_d_t2.png",
+              "galleryImages": [
+                "/images/bookshelf/var_d_t2.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Beautiful design, exactly as shown",
+                  "rating": 5,
+                  "authorName": "Hiro K."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "baseName": "Modern Bookshelf",
+          "baseDesc": "A bookshelf sized for everyday living.",
+          "longDesc": "A bookshelf from our Modern Living collection. Designed for contemporary interiors, this piece pairs cleanly with both warm and cool palettes. Built with engineered wood, metal frame; sized for everyday rooms.",
+          "material": "engineered wood, metal frame",
+          "price": 349.0,
+          "variants": [
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_a",
+              "urlHash": "206d0e86",
+              "primaryImage": "/images/bookshelf/var_a_t3.png",
+              "galleryImages": [
+                "/images/bookshelf/var_a_t3.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_b",
+              "urlHash": "996d2457",
+              "primaryImage": "/images/bookshelf/var_b_t3.png",
+              "galleryImages": [
+                "/images/bookshelf/var_b_t3.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Excellent everyday piece",
+                  "rating": 5,
+                  "authorName": "Aiden M."
+                },
+                {
+                  "body": "Looks great in my living room",
+                  "rating": 5,
+                  "authorName": "Bea L."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_c",
+              "urlHash": "d8258a2e",
+              "primaryImage": "/images/bookshelf/var_c_t3.png",
+              "galleryImages": [
+                "/images/bookshelf/var_c_t3.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Matches the rest of my decor",
+                  "rating": 5,
+                  "authorName": "Felix S."
+                },
+                {
+                  "body": "Good value, fits the room",
+                  "rating": 4,
+                  "authorName": "Devon R."
+                },
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                }
+              ]
+            },
+            {
+              "grainTier": 3,
+              "internalVariantKey": "var_d",
+              "urlHash": "1a0dfcf5",
+              "primaryImage": "/images/bookshelf/var_d_t3.png",
+              "galleryImages": [
+                "/images/bookshelf/var_d_t3.png"
+              ],
+              "title": "Modern Bookshelf",
+              "altText": "Modern Bookshelf",
+              "reviews": [
+                {
+                  "body": "Comfortable for daily use",
+                  "rating": 4,
+                  "authorName": "Grace H."
+                },
+                {
+                  "body": "Sturdy and comfortable",
+                  "rating": 4,
+                  "authorName": "Carla W."
+                },
+                {
+                  "body": "Solid build quality",
+                  "rating": 5,
+                  "authorName": "Elena P."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

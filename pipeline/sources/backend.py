@@ -17,7 +17,7 @@ from ..backends.base import GenerateRequest, ImageBackend
 
 REPO = Path(__file__).resolve().parents[2]
 SOURCE_CACHE_ROOT = (
-    REPO / "VisMem-Diag" / "data" / "vismem_diag" / "images_history" / "source-cache"
+    REPO / "data" / "vismem_diag" / "images_history" / "source-cache"
 )
 
 

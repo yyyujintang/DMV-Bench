@@ -12,7 +12,11 @@ PyYAML==6.0.3
 Pillow==12.1.1
 
 # CLIP backbone (for QC text-image similarity + downstream cache)
-torch==2.10.0+cu128
+# NOTE: the paper used the CUDA 12.8 build (torch==2.10.0+cu128), which is
+# served from the PyTorch index, not PyPI. For a GPU install run:
+#   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+# The bare version below resolves the CPU/default build from PyPI.
+torch==2.10.0
 transformers==4.57.6
 diffusers==0.36.0
 
@@ -23,7 +27,27 @@ pydantic==2.11.10
 pytest==8.3.3
 
 # ---------------------------------------------------------------------
-# VLM backends (see VisMem-Diag/doc/vlm_backends.md)
+# Memory encoders + retrieval
+#
+# SBERT verbal encoder for DualMem / Caption / text baselines. SigLIP-2,
+# CLIP and DINOv2/v3 visual encoders load through `transformers` (pinned
+# above), so only the sentence-transformers wrapper is listed here.
+sentence-transformers>=3.0.0
+# huggingface_hub backs both the encoder weight downloads and
+# scripts/download_images.py (catalogue fetch).
+huggingface_hub>=0.34.0
+
+# ---------------------------------------------------------------------
+# Agent harness
+#
+# The ReAct shopping agent and the Family-2 recall probes drive the live
+# Next.js storefront through a headless Chromium via Playwright. After
+# `pip install`, fetch the browser binary once per machine:
+#     playwright install chromium
+playwright>=1.44.0
+
+# ---------------------------------------------------------------------
+# VLM backends
 #
 # Closed-source API clients
 google-genai>=1.20.0

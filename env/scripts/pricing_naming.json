@@ -1,0 +1,2404 @@
+{
+  "collections": {
+    "vases-vintage": {
+      "slug": "vases-vintage",
+      "categorySlug": "vases",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Vase Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "vases-modern": {
+      "slug": "vases-modern",
+      "categorySlug": "vases",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Vase Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "vases-industrial": {
+      "slug": "vases-industrial",
+      "categorySlug": "vases",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Vase Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "vases-minimalist": {
+      "slug": "vases-minimalist",
+      "categorySlug": "vases",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Vase Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "lamps-vintage": {
+      "slug": "lamps-vintage",
+      "categorySlug": "lamps",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Lamp Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "lamps-modern": {
+      "slug": "lamps-modern",
+      "categorySlug": "lamps",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Lamp Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "lamps-industrial": {
+      "slug": "lamps-industrial",
+      "categorySlug": "lamps",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Lamp Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "lamps-minimalist": {
+      "slug": "lamps-minimalist",
+      "categorySlug": "lamps",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Lamp Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "cushions-vintage": {
+      "slug": "cushions-vintage",
+      "categorySlug": "cushions",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Cushion Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "cushions-modern": {
+      "slug": "cushions-modern",
+      "categorySlug": "cushions",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Cushion Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "cushions-industrial": {
+      "slug": "cushions-industrial",
+      "categorySlug": "cushions",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Cushion Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "cushions-minimalist": {
+      "slug": "cushions-minimalist",
+      "categorySlug": "cushions",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Cushion Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "chairs-vintage": {
+      "slug": "chairs-vintage",
+      "categorySlug": "chairs",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Chair Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "chairs-modern": {
+      "slug": "chairs-modern",
+      "categorySlug": "chairs",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Chair Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "chairs-industrial": {
+      "slug": "chairs-industrial",
+      "categorySlug": "chairs",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Chair Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "chairs-minimalist": {
+      "slug": "chairs-minimalist",
+      "categorySlug": "chairs",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Chair Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "rugs-vintage": {
+      "slug": "rugs-vintage",
+      "categorySlug": "rugs",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Rug Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "rugs-modern": {
+      "slug": "rugs-modern",
+      "categorySlug": "rugs",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Rug Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "rugs-industrial": {
+      "slug": "rugs-industrial",
+      "categorySlug": "rugs",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Rug Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "rugs-minimalist": {
+      "slug": "rugs-minimalist",
+      "categorySlug": "rugs",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Rug Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "tables-vintage": {
+      "slug": "tables-vintage",
+      "categorySlug": "tables",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Side Table Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "tables-modern": {
+      "slug": "tables-modern",
+      "categorySlug": "tables",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Side Table Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "tables-industrial": {
+      "slug": "tables-industrial",
+      "categorySlug": "tables",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Side Table Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "tables-minimalist": {
+      "slug": "tables-minimalist",
+      "categorySlug": "tables",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Side Table Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "sofas-vintage": {
+      "slug": "sofas-vintage",
+      "categorySlug": "sofas",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Sofa Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "sofas-modern": {
+      "slug": "sofas-modern",
+      "categorySlug": "sofas",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Sofa Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "sofas-industrial": {
+      "slug": "sofas-industrial",
+      "categorySlug": "sofas",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Sofa Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "sofas-minimalist": {
+      "slug": "sofas-minimalist",
+      "categorySlug": "sofas",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Sofa Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "bookshelves-vintage": {
+      "slug": "bookshelves-vintage",
+      "categorySlug": "bookshelves",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Bookshelf Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "bookshelves-modern": {
+      "slug": "bookshelves-modern",
+      "categorySlug": "bookshelves",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Bookshelf Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "bookshelves-industrial": {
+      "slug": "bookshelves-industrial",
+      "categorySlug": "bookshelves",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Bookshelf Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "bookshelves-minimalist": {
+      "slug": "bookshelves-minimalist",
+      "categorySlug": "bookshelves",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Bookshelf Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "wall_art-vintage": {
+      "slug": "wall_art-vintage",
+      "categorySlug": "wall_art",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Wall Print Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "wall_art-modern": {
+      "slug": "wall_art-modern",
+      "categorySlug": "wall_art",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Wall Print Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "wall_art-industrial": {
+      "slug": "wall_art-industrial",
+      "categorySlug": "wall_art",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Wall Print Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "wall_art-minimalist": {
+      "slug": "wall_art-minimalist",
+      "categorySlug": "wall_art",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Wall Print Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "plant_pots-vintage": {
+      "slug": "plant_pots-vintage",
+      "categorySlug": "plant_pots",
+      "tier": 3,
+      "styleSlug": "vintage",
+      "displayName": "Vintage Plant Pot Collection",
+      "displayOrder": 2,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "plant_pots-modern": {
+      "slug": "plant_pots-modern",
+      "categorySlug": "plant_pots",
+      "tier": 1,
+      "styleSlug": "modern",
+      "displayName": "Modern Plant Pot Collection",
+      "displayOrder": 0,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "plant_pots-industrial": {
+      "slug": "plant_pots-industrial",
+      "categorySlug": "plant_pots",
+      "tier": 4,
+      "styleSlug": "industrial",
+      "displayName": "Industrial Plant Pot Collection",
+      "displayOrder": 3,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    },
+    "plant_pots-minimalist": {
+      "slug": "plant_pots-minimalist",
+      "categorySlug": "plant_pots",
+      "tier": 2,
+      "styleSlug": "minimalist",
+      "displayName": "Minimalist Plant Pot Collection",
+      "displayOrder": 1,
+      "tierFlavour": "",
+      "materialSlug": "",
+      "materialDescriptor": ""
+    }
+  },
+  "variants": {
+    "13f2c23f": {
+      "displayName": "Vase — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 96.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "vases-modern",
+      "collectionName": "Modern Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "faceted_facets"
+      ]
+    },
+    "77e22195": {
+      "displayName": "Vase — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 85.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "vases-minimalist",
+      "collectionName": "Minimalist Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "296a4563": {
+      "displayName": "Vase — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 101.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "vases-vintage",
+      "collectionName": "Vintage Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_relief_band"
+      ]
+    },
+    "cca2e95c": {
+      "displayName": "Vase — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 90.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "vases-industrial",
+      "collectionName": "Industrial Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "unglazed_clay_band",
+        "metal_strap_handle"
+      ]
+    },
+    "c2925855": {
+      "displayName": "Vase — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 95.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "vases-modern",
+      "collectionName": "Modern Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "incised_geometric_band"
+      ]
+    },
+    "c5187f5f": {
+      "displayName": "Vase — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 84.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "vases-minimalist",
+      "collectionName": "Minimalist Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "165e0102": {
+      "displayName": "Vase — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 100.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "vases-vintage",
+      "collectionName": "Vintage Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_relief_band"
+      ]
+    },
+    "2de5c222": {
+      "displayName": "Vase — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 89.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "vases-industrial",
+      "collectionName": "Industrial Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "metal_strap_handle",
+        "unglazed_clay_band"
+      ]
+    },
+    "d390a708": {
+      "displayName": "Vase — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 94.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "vases-modern",
+      "collectionName": "Modern Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "faceted_facets"
+      ]
+    },
+    "f711a168": {
+      "displayName": "Vase — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 83.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "vases-minimalist",
+      "collectionName": "Minimalist Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "0061592d": {
+      "displayName": "Vase — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 99.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "vases-vintage",
+      "collectionName": "Vintage Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "painted_floral_motif",
+        "ornate_relief_band"
+      ]
+    },
+    "7b48216f": {
+      "displayName": "Vase — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 88.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "vases-industrial",
+      "collectionName": "Industrial Vase Collection",
+      "categorySlug": "vases",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "metal_strap_handle",
+        "unglazed_clay_band"
+      ]
+    },
+    "03b53b93": {
+      "displayName": "Lamp — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 167.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-modern",
+      "collectionName": "Modern Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_bulb",
+        "splayed_legs"
+      ]
+    },
+    "c49a62bb": {
+      "displayName": "Lamp — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 148.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-minimalist",
+      "collectionName": "Minimalist Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "e21ee94f": {
+      "displayName": "Lamp — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 177.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-vintage",
+      "collectionName": "Vintage Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "brass_finial",
+        "ornate_carving"
+      ]
+    },
+    "d5d7e922": {
+      "displayName": "Lamp — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 158.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-industrial",
+      "collectionName": "Industrial Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "pipe_arm"
+      ]
+    },
+    "fc1841b2": {
+      "displayName": "Lamp — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 165.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-modern",
+      "collectionName": "Modern Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_bulb",
+        "splayed_legs"
+      ]
+    },
+    "fc900a47": {
+      "displayName": "Lamp — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 146.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-minimalist",
+      "collectionName": "Minimalist Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "54122cb7": {
+      "displayName": "Lamp — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 175.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-vintage",
+      "collectionName": "Vintage Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "brass_finial",
+        "fringe"
+      ]
+    },
+    "fdbd9c94": {
+      "displayName": "Lamp — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 156.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-industrial",
+      "collectionName": "Industrial Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "pipe_arm",
+        "exposed_rivets"
+      ]
+    },
+    "a487ccdb": {
+      "displayName": "Lamp — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 163.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-modern",
+      "collectionName": "Modern Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "splayed_legs"
+      ]
+    },
+    "41f43185": {
+      "displayName": "Lamp — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 144.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-minimalist",
+      "collectionName": "Minimalist Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "e55991f4": {
+      "displayName": "Lamp — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 173.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-vintage",
+      "collectionName": "Vintage Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "fringe"
+      ]
+    },
+    "e5e28d0b": {
+      "displayName": "Lamp — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 154.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "lamps-industrial",
+      "collectionName": "Industrial Lamp Collection",
+      "categorySlug": "lamps",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_rivets",
+        "metal_caster_wheels"
+      ]
+    },
+    "fed87cca": {
+      "displayName": "Cushion — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 60.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-modern",
+      "collectionName": "Modern Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "bf54ddfe": {
+      "displayName": "Cushion — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 53.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-minimalist",
+      "collectionName": "Minimalist Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "d0422c58": {
+      "displayName": "Cushion — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 64.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-vintage",
+      "collectionName": "Vintage Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "button_tufting",
+        "brass_nailheads"
+      ]
+    },
+    "5740b8ce": {
+      "displayName": "Cushion — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 57.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-industrial",
+      "collectionName": "Industrial Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "rough_canvas_weave"
+      ]
+    },
+    "1a8d5904": {
+      "displayName": "Cushion — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 59.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-modern",
+      "collectionName": "Modern Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "24e5c09d": {
+      "displayName": "Cushion — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 52.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-minimalist",
+      "collectionName": "Minimalist Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "a5f2cac6": {
+      "displayName": "Cushion — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 63.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-vintage",
+      "collectionName": "Vintage Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "fringe",
+        "button_tufting"
+      ]
+    },
+    "87163f92": {
+      "displayName": "Cushion — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 56.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-industrial",
+      "collectionName": "Industrial Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_rivets"
+      ]
+    },
+    "afa8fee5": {
+      "displayName": "Cushion — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 58.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-modern",
+      "collectionName": "Modern Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "6d1f2a86": {
+      "displayName": "Cushion — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 51.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-minimalist",
+      "collectionName": "Minimalist Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "289b29a8": {
+      "displayName": "Cushion — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 62.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-vintage",
+      "collectionName": "Vintage Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "brass_nailheads"
+      ]
+    },
+    "9e451881": {
+      "displayName": "Cushion — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 55.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "cushions-industrial",
+      "collectionName": "Industrial Cushion Collection",
+      "categorySlug": "cushions",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "rough_canvas_weave",
+        "exposed_rivets"
+      ]
+    },
+    "37de2f75": {
+      "displayName": "Chair — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 567.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-modern",
+      "collectionName": "Modern Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs",
+        "geometric_topstitching"
+      ]
+    },
+    "2401557c": {
+      "displayName": "Chair — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 502.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-minimalist",
+      "collectionName": "Minimalist Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "b76d7e17": {
+      "displayName": "Chair — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 599.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-vintage",
+      "collectionName": "Vintage Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "button_tufting",
+        "ornate_carving"
+      ]
+    },
+    "ae9b6890": {
+      "displayName": "Chair — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 534.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-industrial",
+      "collectionName": "Industrial Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing"
+      ]
+    },
+    "fbd48b89": {
+      "displayName": "Chair — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 561.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-modern",
+      "collectionName": "Modern Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "splayed_legs"
+      ]
+    },
+    "f0a7466e": {
+      "displayName": "Chair — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 496.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-minimalist",
+      "collectionName": "Minimalist Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "2e727cd2": {
+      "displayName": "Chair — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 593.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-vintage",
+      "collectionName": "Vintage Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "button_tufting",
+        "fringe"
+      ]
+    },
+    "ec94c692": {
+      "displayName": "Chair — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 528.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-industrial",
+      "collectionName": "Industrial Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "metal_caster_wheels"
+      ]
+    },
+    "6b477857": {
+      "displayName": "Chair — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 555.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-modern",
+      "collectionName": "Modern Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs",
+        "splayed_legs"
+      ]
+    },
+    "bc6f5b70": {
+      "displayName": "Chair — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 490.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-minimalist",
+      "collectionName": "Minimalist Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "d0d8b36c": {
+      "displayName": "Chair — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 587.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-vintage",
+      "collectionName": "Vintage Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_carving"
+      ]
+    },
+    "3459bcdb": {
+      "displayName": "Chair — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 522.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "chairs-industrial",
+      "collectionName": "Industrial Chair Collection",
+      "categorySlug": "chairs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "metal_caster_wheels",
+        "pipe_legs"
+      ]
+    },
+    "7574d596": {
+      "displayName": "Rug — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 377.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-modern",
+      "collectionName": "Modern Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "ec08177a": {
+      "displayName": "Rug — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 334.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-minimalist",
+      "collectionName": "Minimalist Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "single_seam"
+      ]
+    },
+    "6463b001": {
+      "displayName": "Rug — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 399.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-vintage",
+      "collectionName": "Vintage Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "fringe"
+      ]
+    },
+    "242f7049": {
+      "displayName": "Rug — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 356.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-industrial",
+      "collectionName": "Industrial Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "visible_weave"
+      ]
+    },
+    "6082c506": {
+      "displayName": "Rug — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 373.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-modern",
+      "collectionName": "Modern Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "1b86c9ae": {
+      "displayName": "Rug — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 330.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-minimalist",
+      "collectionName": "Minimalist Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "uniform_solid"
+      ]
+    },
+    "47267617": {
+      "displayName": "Rug — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 395.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-vintage",
+      "collectionName": "Vintage Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "fringe"
+      ]
+    },
+    "1ab77a92": {
+      "displayName": "Rug — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 352.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-industrial",
+      "collectionName": "Industrial Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_unfinished_edge"
+      ]
+    },
+    "352ba9b6": {
+      "displayName": "Rug — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 369.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-modern",
+      "collectionName": "Modern Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching"
+      ]
+    },
+    "75a9ff5d": {
+      "displayName": "Rug — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 326.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-minimalist",
+      "collectionName": "Minimalist Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "single_seam"
+      ]
+    },
+    "72b1eccd": {
+      "displayName": "Rug — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 391.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-vintage",
+      "collectionName": "Vintage Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "medallion_motif"
+      ]
+    },
+    "84dc93ad": {
+      "displayName": "Rug — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 348.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "rugs-industrial",
+      "collectionName": "Industrial Rug Collection",
+      "categorySlug": "rugs",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "visible_weave"
+      ]
+    },
+    "4f981c85": {
+      "displayName": "Side Table — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 252.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "tables-modern",
+      "collectionName": "Modern Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "splayed_legs",
+        "slim_metal_legs"
+      ]
+    },
+    "73171b5b": {
+      "displayName": "Side Table — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 223.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "tables-minimalist",
+      "collectionName": "Minimalist Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "ea131de1": {
+      "displayName": "Side Table — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 266.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "tables-vintage",
+      "collectionName": "Vintage Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_carving"
+      ]
+    },
+    "c6b9d5c6": {
+      "displayName": "Side Table — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 237.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "tables-industrial",
+      "collectionName": "Industrial Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing"
+      ]
+    },
+    "f836c098": {
+      "displayName": "Side Table — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 249.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "tables-modern",
+      "collectionName": "Modern Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs",
+        "splayed_legs"
+      ]
+    },
+    "1f441d6f": {
+      "displayName": "Side Table — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 220.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "tables-minimalist",
+      "collectionName": "Minimalist Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "single_seam"
+      ]
+    },
+    "00b6fd9e": {
+      "displayName": "Side Table — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 263.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "tables-vintage",
+      "collectionName": "Vintage Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_carving",
+        "brass_drawer_pull"
+      ]
+    },
+    "8407ea0c": {
+      "displayName": "Side Table — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 234.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "tables-industrial",
+      "collectionName": "Industrial Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing",
+        "pipe_legs"
+      ]
+    },
+    "20be0a3b": {
+      "displayName": "Side Table — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 246.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "tables-modern",
+      "collectionName": "Modern Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs"
+      ]
+    },
+    "30bbc1d8": {
+      "displayName": "Side Table — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 217.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "tables-minimalist",
+      "collectionName": "Minimalist Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "e6f7e268": {
+      "displayName": "Side Table — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 260.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "tables-vintage",
+      "collectionName": "Vintage Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "brass_drawer_pull",
+        "ornate_carving"
+      ]
+    },
+    "91890824": {
+      "displayName": "Side Table — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 231.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "tables-industrial",
+      "collectionName": "Industrial Side Table Collection",
+      "categorySlug": "tables",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "metal_caster_wheels"
+      ]
+    },
+    "0b53335a": {
+      "displayName": "Sofa — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 967.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-modern",
+      "collectionName": "Modern Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs"
+      ]
+    },
+    "e7ef715c": {
+      "displayName": "Sofa — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 856.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-minimalist",
+      "collectionName": "Minimalist Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "af6bc34a": {
+      "displayName": "Sofa — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 1022.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-vintage",
+      "collectionName": "Vintage Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "button_tufting"
+      ]
+    },
+    "cbdd5055": {
+      "displayName": "Sofa — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 912.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-industrial",
+      "collectionName": "Industrial Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing"
+      ]
+    },
+    "3f99ffb0": {
+      "displayName": "Sofa — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 956.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-modern",
+      "collectionName": "Modern Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching",
+        "slim_metal_legs"
+      ]
+    },
+    "00356b2f": {
+      "displayName": "Sofa — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 845.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-minimalist",
+      "collectionName": "Minimalist Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "90a6c396": {
+      "displayName": "Sofa — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 1011.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-vintage",
+      "collectionName": "Vintage Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "button_tufting",
+        "brass_nailheads"
+      ]
+    },
+    "b22f69ac": {
+      "displayName": "Sofa — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 901.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-industrial",
+      "collectionName": "Industrial Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing",
+        "metal_caster_wheels"
+      ]
+    },
+    "4b96e08c": {
+      "displayName": "Sofa — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 945.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-modern",
+      "collectionName": "Modern Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "geometric_topstitching",
+        "slim_metal_legs"
+      ]
+    },
+    "28a4f0f8": {
+      "displayName": "Sofa — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 834.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-minimalist",
+      "collectionName": "Minimalist Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "60dd0611": {
+      "displayName": "Sofa — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 1000.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-vintage",
+      "collectionName": "Vintage Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "fringe"
+      ]
+    },
+    "201e766f": {
+      "displayName": "Sofa — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 890.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "sofas-industrial",
+      "collectionName": "Industrial Sofa Collection",
+      "categorySlug": "sofas",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_rivets",
+        "metal_caster_wheels"
+      ]
+    },
+    "f143bb95": {
+      "displayName": "Bookshelf — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 441.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-modern",
+      "collectionName": "Modern Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs"
+      ]
+    },
+    "6b77d7d8": {
+      "displayName": "Bookshelf — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 390.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-minimalist",
+      "collectionName": "Minimalist Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "single_seam"
+      ]
+    },
+    "32af6cbf": {
+      "displayName": "Bookshelf — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 466.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-vintage",
+      "collectionName": "Vintage Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "brass_drawer_pull",
+        "ornate_carving"
+      ]
+    },
+    "11aae6db": {
+      "displayName": "Bookshelf — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 416.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-industrial",
+      "collectionName": "Industrial Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_rivets"
+      ]
+    },
+    "00c3c17d": {
+      "displayName": "Bookshelf — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 436.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-modern",
+      "collectionName": "Modern Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "splayed_legs"
+      ]
+    },
+    "435c0f7a": {
+      "displayName": "Bookshelf — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 385.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-minimalist",
+      "collectionName": "Minimalist Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "b7e09841": {
+      "displayName": "Bookshelf — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 461.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-vintage",
+      "collectionName": "Vintage Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_carving",
+        "brass_drawer_pull"
+      ]
+    },
+    "fab2f51a": {
+      "displayName": "Bookshelf — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 411.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-industrial",
+      "collectionName": "Industrial Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "pipe_legs"
+      ]
+    },
+    "206d0e86": {
+      "displayName": "Bookshelf — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 431.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-modern",
+      "collectionName": "Modern Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "slim_metal_legs",
+        "splayed_legs"
+      ]
+    },
+    "996d2457": {
+      "displayName": "Bookshelf — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 380.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-minimalist",
+      "collectionName": "Minimalist Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "hidden_hardware"
+      ]
+    },
+    "d8258a2e": {
+      "displayName": "Bookshelf — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 456.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-vintage",
+      "collectionName": "Vintage Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_carving"
+      ]
+    },
+    "1a0dfcf5": {
+      "displayName": "Bookshelf — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 406.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "bookshelves-industrial",
+      "collectionName": "Industrial Bookshelf Collection",
+      "categorySlug": "bookshelves",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_steel_bracing"
+      ]
+    },
+    "68317101": {
+      "displayName": "Wall Print — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 157.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-modern",
+      "collectionName": "Modern Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "thin_minimalist_frame",
+        "bold_geometric_shapes"
+      ]
+    },
+    "682384bd": {
+      "displayName": "Wall Print — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 139.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-minimalist",
+      "collectionName": "Minimalist Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "e4bfcfac": {
+      "displayName": "Wall Print — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 166.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-vintage",
+      "collectionName": "Vintage Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_gilded_frame"
+      ]
+    },
+    "a671de19": {
+      "displayName": "Wall Print — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 148.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-industrial",
+      "collectionName": "Industrial Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_metal_frame",
+        "exposed_rivets"
+      ]
+    },
+    "6e805c5a": {
+      "displayName": "Wall Print — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 155.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-modern",
+      "collectionName": "Modern Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "thin_minimalist_frame"
+      ]
+    },
+    "e8ee9866": {
+      "displayName": "Wall Print — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 137.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-minimalist",
+      "collectionName": "Minimalist Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "flush_panels"
+      ]
+    },
+    "04a481e8": {
+      "displayName": "Wall Print — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 164.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-vintage",
+      "collectionName": "Vintage Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_gilded_frame",
+        "painted_floral_motif"
+      ]
+    },
+    "0c5dd8ce": {
+      "displayName": "Wall Print — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 146.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-industrial",
+      "collectionName": "Industrial Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "exposed_rivets"
+      ]
+    },
+    "3c9330b5": {
+      "displayName": "Wall Print — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 153.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-modern",
+      "collectionName": "Modern Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "thin_minimalist_frame",
+        "bold_geometric_shapes"
+      ]
+    },
+    "ff524045": {
+      "displayName": "Wall Print — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 135.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-minimalist",
+      "collectionName": "Minimalist Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "frameless_canvas"
+      ]
+    },
+    "2a9120d5": {
+      "displayName": "Wall Print — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 162.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-vintage",
+      "collectionName": "Vintage Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "painted_floral_motif"
+      ]
+    },
+    "cbdc8897": {
+      "displayName": "Wall Print — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 144.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "wall_art-industrial",
+      "collectionName": "Industrial Wall Print Collection",
+      "categorySlug": "wall_art",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "raw_metal_frame",
+        "exposed_rivets"
+      ]
+    },
+    "6d12ae89": {
+      "displayName": "Plant Pot — Caramel",
+      "colorName": "Caramel",
+      "styleSlug": "modern",
+      "price": 71.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-modern",
+      "collectionName": "Modern Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "faceted_facets"
+      ]
+    },
+    "1063626b": {
+      "displayName": "Plant Pot — Ivory",
+      "colorName": "Ivory",
+      "styleSlug": "minimalist",
+      "price": 63.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-minimalist",
+      "collectionName": "Minimalist Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "b44adbe9": {
+      "displayName": "Plant Pot — Tobacco",
+      "colorName": "Tobacco",
+      "styleSlug": "vintage",
+      "price": 75.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-vintage",
+      "collectionName": "Vintage Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "painted_floral_motif"
+      ]
+    },
+    "0d275500": {
+      "displayName": "Plant Pot — Charcoal",
+      "colorName": "Charcoal",
+      "styleSlug": "industrial",
+      "price": 67.99,
+      "tier": 1,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-industrial",
+      "collectionName": "Industrial Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "unglazed_clay_band"
+      ]
+    },
+    "060f8e8b": {
+      "displayName": "Plant Pot — Sage",
+      "colorName": "Sage",
+      "styleSlug": "modern",
+      "price": 70.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-modern",
+      "collectionName": "Modern Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "faceted_facets"
+      ]
+    },
+    "bd2932e7": {
+      "displayName": "Plant Pot — Dove",
+      "colorName": "Dove",
+      "styleSlug": "minimalist",
+      "price": 62.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-minimalist",
+      "collectionName": "Minimalist Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "f8e3f095": {
+      "displayName": "Plant Pot — Burgundy",
+      "colorName": "Burgundy",
+      "styleSlug": "vintage",
+      "price": 74.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-vintage",
+      "collectionName": "Vintage Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "painted_floral_motif"
+      ]
+    },
+    "702a27cd": {
+      "displayName": "Plant Pot — Slate",
+      "colorName": "Slate",
+      "styleSlug": "industrial",
+      "price": 66.99,
+      "tier": 2,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-industrial",
+      "collectionName": "Industrial Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "unglazed_clay_band"
+      ]
+    },
+    "e1529320": {
+      "displayName": "Plant Pot — Bone",
+      "colorName": "Bone",
+      "styleSlug": "modern",
+      "price": 69.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-modern",
+      "collectionName": "Modern Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "incised_geometric_band"
+      ]
+    },
+    "6ba8a24b": {
+      "displayName": "Plant Pot — Mist",
+      "colorName": "Mist",
+      "styleSlug": "minimalist",
+      "price": 61.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-minimalist",
+      "collectionName": "Minimalist Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "seamless_glaze"
+      ]
+    },
+    "f986afb5": {
+      "displayName": "Plant Pot — Plum",
+      "colorName": "Plum",
+      "styleSlug": "vintage",
+      "price": 73.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-vintage",
+      "collectionName": "Vintage Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "ornate_relief_band",
+        "painted_floral_motif"
+      ]
+    },
+    "be11e3e2": {
+      "displayName": "Plant Pot — Olive",
+      "colorName": "Olive",
+      "styleSlug": "industrial",
+      "price": 65.99,
+      "tier": 3,
+      "tierFlavour": "",
+      "collectionSlug": "plant_pots-industrial",
+      "collectionName": "Industrial Plant Pot Collection",
+      "categorySlug": "plant_pots",
+      "materialSlug": "",
+      "materialDescriptor": "",
+      "incidentalDetails": [
+        "unglazed_clay_band",
+        "metal_strap_handle"
+      ]
+    }
+  }
+}

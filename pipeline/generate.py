@@ -65,9 +65,9 @@ from .qc.vision import detail_visible
 
 
 REPO = Path(__file__).resolve().parents[1]
-PRICING_PATH = REPO / "VisMem-Diag" / "env" / "scripts" / "pricing_naming.json"
-IMAGING_SPECS = REPO / "VisMem-Diag" / "env" / "scripts" / "imaging_specs.json"
-PUBLIC_ROOT = REPO / "VisMem-Diag" / "env" / "frontend" / "public"
+PRICING_PATH = REPO / "env" / "scripts" / "pricing_naming.json"
+IMAGING_SPECS = REPO / "env" / "scripts" / "imaging_specs.json"
+PUBLIC_ROOT = REPO / "env" / "frontend" / "public"
 
 MAX_RETRIES = 3
 MIN_BYTES = 1024

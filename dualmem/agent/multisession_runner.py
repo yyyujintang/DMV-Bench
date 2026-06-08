@@ -91,7 +91,7 @@ def _variant_lookup() -> dict:
         try:
             import json as _json
             v2_root = (_PROJECT_ROOT_FOR_V2()
-                       / "VisMem-Diag" / "data" / "vismem_diag_v2")
+                       / "data" / "vismem_diag_v2")
             registry = _json.loads((v2_root / "cue_registry.json").read_text())
             with_cue_root = v2_root / "images" / "with_cue"
             _DEFAULT_IMAGE_ROOT = with_cue_root
@@ -110,8 +110,8 @@ def _variant_lookup() -> dict:
 
 
 def _PROJECT_ROOT_FOR_V2() -> Path:
-    """…/DualMem_A — three parents up from this file."""
-    return Path(__file__).resolve().parents[3]
+    """Repository root — two parents up from this file (dualmem/agent/…)."""
+    return Path(__file__).resolve().parents[2]
 
 
 # Backwards-compat shim — earlier code path used a flat dict of urlHash → text.

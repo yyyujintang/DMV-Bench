@@ -57,31 +57,49 @@ DMV-Bench/
 
 ## Getting started
 
-1. **Python deps** — `pip install -r requirements.txt`
-2. **Frontend** — `cd env/frontend && npm install && npx prisma migrate dev`
-3. **Catalogue images** — the $1{,}000$-variant catalogue images
-   (`env/frontend/public/images_v2/`) are too large to ship with code.
-   Regenerate them with:
+1. **Python deps** —
 
    ```bash
-   cd pipeline
-   python generate.py --target-count 1000 --backend gemini-imagen
-   # then run the cue-editing pass (NanoBanana edits):
-   python generate.py --mode edit-cues
+   pip install -r requirements.txt
+   # one-time: fetch the headless browser the agent drives the storefront with
+   playwright install chromium
    ```
 
-   This populates `env/frontend/public/images_v2/{base,with_cue}/<category>/<style>/`.
+   For a GPU box, install the CUDA build of PyTorch first (see the note in
+   `requirements.txt`); the encoders fall back to CPU otherwise.
 
-4. **Seed the storefront DB** —
+2. **Catalogue images** — every storefront product carries a unique baked-in
+   incidental cue, so the runner and the storefront share one `with_cue` image
+   set (~1.5 GB). We release the original catalogue as a public Hugging Face
+   dataset — [`yyyujintang/DMV-Bench-Images`](https://huggingface.co/datasets/yyyujintang/DMV-Bench-Images).
+   Fetch it into the layout the code expects (no token needed):
+
+   ```bash
+   python scripts/download_images.py            # add --link-frontend to save ~1.5 GB
+   ```
+
+   This populates `data/vismem_diag_v2/images/with_cue/` (read by the runner)
+   and `env/frontend/public/images_v2/` (served by the storefront). Point at a
+   different mirror with `--repo-id` or `DMVBENCH_IMAGES_REPO`. To instead
+   regenerate the catalogue from scratch, see `pipeline/` (requires a Gemini
+   Imagen / NanoBanana key).
+
+3. **Frontend** —
 
    ```bash
    cd env/frontend
-   npx tsx scripts/seed_from_pipeline.ts
+   npm install                       # also runs `prisma generate`
+   cp .env.example .env              # sets DATABASE_URL=file:../prisma/dev.db
+   npx prisma db push                # create the SQLite schema
+   npm run seed:v2                   # load the 1,000-variant catalogue
    ```
 
-5. **Run the dev server** — `npm run dev -- -p 3000`
+   > Use `prisma db push` (not `migrate dev`): the committed migrations target
+   > Postgres for the hosted-deploy path, while local dev runs on SQLite.
 
-6. **Run an experiment** —
+4. **Run the dev server** — `npm run dev -- -p 3000`
+
+5. **Run an experiment** (from the repo root, with a `GEMINI_API_KEY` exported) —
 
    ```bash
    # Incidental-Cue task, J=5 chain, Gemini back-end, single seed:
@@ -92,7 +110,8 @@ DMV-Bench/
        --out-dir results/J5_DualMem-a75/
    ```
 
-   Switch to Qwen2.5-VL-7B via vLLM with
+   Writes `f2_summary.csv`, `f2_per_probe.csv`, and per-trial logs under
+   `--out-dir`. Switch to Qwen2.5-VL-7B via vLLM with
    `--vlm qwen-vl-7b-vllm --base-url <vllm_url>`.
 
 ## Memory architectures audited
@@ -105,7 +124,7 @@ architecture rather than harness drift.
 | System              | Encode               | Retrieve                | Inject       |
 |---------------------|----------------------|-------------------------|--------------|
 | NoMemory            | (none)               | (none)                  | (none)       |
-| ContextOnly         | encode_text          | full dump               | text         |
+| LongContext         | encode_text          | full dump               | text         |
 | Caption             | VLM caption          | SBERT cosine            | text         |
 | WorldMM-lite        | ep+sem+vis modules   | adaptive iterative      | retrieved    |
 | MMA-lite            | semantic store       | reliability-weighted    | text         |
@@ -138,9 +157,14 @@ recall paths — roughly a $J\times$ saving over flat re-runs at $B{=}5$.
 
 ## Data products
 
-This repo ships **code only**. Two artefact families are regenerable:
+This repo ships **code plus the small JSON sources** (catalogue seed,
+pricing/naming, cue registry under `env/scripts/` and `data/vismem_diag_v2/`).
+Two large artefact families live outside git:
 
-- **Catalogue images** (~1.5 GB): rebuild with `pipeline/generate.py`.
+- **Catalogue images** (~1.5 GB, `with_cue` set): released as the public
+  Hugging Face dataset
+  [`yyyujintang/DMV-Bench-Images`](https://huggingface.co/datasets/yyyujintang/DMV-Bench-Images);
+  fetch with `scripts/download_images.py`, or rebuild with `pipeline/generate.py`.
 - **Family 2 task spines** (`tasks/pool_v2/f2_trees/*.json`): regenerate
   with `tasks/generators/f2_online_ic.py` (the runner does this
   automatically when `--seeds N` is passed).

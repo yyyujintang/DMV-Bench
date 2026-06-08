@@ -26,8 +26,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-LIVE_ROOT = REPO / "VisMem-Diag" / "data" / "vismem_diag" / "images"
-HISTORY_ROOT = REPO / "VisMem-Diag" / "data" / "vismem_diag" / "images_history"
+LIVE_ROOT = REPO / "data" / "vismem_diag" / "images"
+HISTORY_ROOT = REPO / "data" / "vismem_diag" / "images_history"
 
 PRE_HISTORY_TAG = "pre-history"
 

@@ -63,7 +63,7 @@ DETAIL_PHRASE: dict[str, str] = {
 }
 
 REPO = Path(__file__).resolve().parents[2]
-PRICING_PATH = REPO / "VisMem-Diag" / "env" / "scripts" / "pricing_naming.json"
+PRICING_PATH = REPO / "env" / "scripts" / "pricing_naming.json"
 
 
 def _load_variant_details() -> dict[str, list[str]]:

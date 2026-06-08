@@ -26,8 +26,8 @@ from dualmem.agent.dmvbench_live_runner import (
     _build_prompt, _format_memory_payload, _retrieve_step,
 )
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
-V2 = REPO_ROOT / "VisMem-Diag" / "data" / "vismem_diag_v2"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+V2 = REPO_ROOT / "data" / "vismem_diag_v2"
 BASE_IMG_ROOT = V2 / "images" / "base"
 WITH_CUE_IMG_ROOT = V2 / "images" / "with_cue"   # v6: every product carries a baked-in cue
 ONLINE_CUE_ROOT = V2 / "images" / "online_cue_v2"    # disk cache of online edits

@@ -39,9 +39,17 @@ yarn-error.log*
 *.sqlite3
 env/frontend/prisma/*.db*
 
-# ---- Catalogue images (~1.5 GB — regenerate via pipeline/generate.py) ----
+# ---- Catalogue images (~1.5 GB each — fetch via scripts/download_images.py) ----
+# Frontend-served roots and the runner-read roots all live outside git.
 env/frontend/public/images_v2/
 env/frontend/public/images/
+data/vismem_diag_v2/images/
+data/vismem_diag/
+
+# ---- Runtime caches written by the runner (regenerated on demand) ----
+data/vismem_diag_v2/f2_trajectories/
+data/vismem_diag_v2/f2_trajectories_qwen/
+data/vismem_diag_v2/_caption_cache.json
 
 # ---- Per-trial results / logs (written at runtime) ----
 results/
