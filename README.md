@@ -22,6 +22,14 @@ repository contains:
   (Gemini 2.5 Flash and Qwen2.5-VL-7B), with the lead surviving controls
   for memory-bank size and encoding-position bias.
 
+<p align="center">
+  <img src="figs/teaser.png" alt="Incidental Cue task overview" width="760">
+</p>
+
+<p align="center"><em>An incidental cue (an alarm clock) appears only in the
+product image and is never mentioned in text, so text-only memory fails the
+recall probe while a memory that retains pixels succeeds.</em></p>
+
 ## Getting started
 
 1. **Python deps**
@@ -82,6 +90,14 @@ repository contains:
    `--vlm qwen-vl-7b-vllm --base-url <vllm_url>`.
 
 ## Memory architectures audited
+
+<p align="center">
+  <img src="figs/main.png" alt="DualMem architecture" width="860">
+</p>
+
+<p align="center"><em>DualMem stores a visual code (SigLIP-2) and a verbal code
+(SBERT) for every observation in one bank; retrieval fuses both scores and
+injects the top image and caption into the next-action VLM.</em></p>
 
 The seven systems share an `encode` / `retrieve` / `inject` interface
 (`dualmem/systems/`); DualMem and the four external multimodal baselines all
