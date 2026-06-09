@@ -91,7 +91,7 @@ architecture rather than harness drift.
 | System              | Encode               | Retrieve                | Inject       |
 |---------------------|----------------------|-------------------------|--------------|
 | NoMemory            | (none)               | (none)                  | (none)       |
-| LongContext         | encode_text          | full dump               | text         |
+| TextOnly            | encode_text          | SBERT cosine            | text         |
 | Caption             | VLM caption          | SBERT cosine            | text         |
 | WorldMM-lite        | ep+sem+vis modules   | adaptive iterative      | retrieved    |
 | MMA-lite            | semantic store       | reliability-weighted    | text         |
