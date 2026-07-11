@@ -144,10 +144,11 @@ This repo ships **code plus the small JSON sources** (catalogue seed,
 pricing/naming, cue registry under `env/scripts/` and `data/vismem_diag_v2/`).
 Two large artefact families live outside git:
 
-- **Catalogue images** (~1.5 GB, `with_cue` set): released as the public
-  Hugging Face dataset
+- **Catalogue images** (~3 GB: `with_cue/` set used by the benchmark plus the
+  un-edited `base/` originals): released as the public Hugging Face dataset
   [`yyyujintang/DMV-Bench-Images`](https://huggingface.co/datasets/yyyujintang/DMV-Bench-Images);
-  fetch with `scripts/download_images.py`, or rebuild with `pipeline/generate.py`.
+  fetch with `scripts/download_images.py` (add `--with-base` for the
+  originals), or rebuild with `pipeline/generate.py`.
 - **Family 2 task spines** (`tasks/pool_v2/f2_trees/*.json`): regenerate
   with `tasks/generators/f2_online_ic.py` (the runner does this
   automatically when `--seeds N` is passed).
