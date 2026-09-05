@@ -21,7 +21,23 @@ CAPTION_PROMPT = (
     "someone identify this exact product later (color, shape, material, distinctive features). "
     "Do not invent attributes not visible in the image. Do not number, do not include preamble."
 )
+# The captioner used for every result in the paper. It is deliberately steered
+# at product attributes and is NOT filtered against the cue vocabulary: whether
+# a cue survives compression into language is a measured property of the
+# baseline, not something the harness enforces.
 DEFAULT_CACHE = "data/vismem_diag_v2/_caption_cache.json"
+
+# An unsteered, exhaustive alternative: describes everything visible rather
+# than product attributes, so it verbalises the incidental cue far more often.
+# Used to show the DualMem lead is not an artefact of a stingy captioner. It
+# must never hint that cues exist -- that would leak the benchmark's signal.
+EXHAUSTIVE_CAPTION_PROMPT = (
+    "Describe this photograph in detail in 3 to 5 sentences. Describe every object visible in "
+    "the image, including the setting, the background, and any smaller items present, together "
+    "with their colors and materials. Do not invent things not visible in the image. "
+    "Do not number, do not include preamble."
+)
+EXHAUSTIVE_CACHE = "data/vismem_diag_v2/_caption_cache_exhaustive.json"
 
 
 def _cache_key(image_path: str) -> str:
@@ -36,7 +52,9 @@ def _cache_key(image_path: str) -> str:
     return "/".join(parts[-3:]) if len(parts) >= 3 else os.path.basename(image_path)
 
 
-def make_gemini_caption_fn(model: str = "gemini-2.5-flash", cache_path: str = DEFAULT_CACHE) -> Callable[[str], str]:
+def make_gemini_caption_fn(model: str = "gemini-2.5-flash",
+                           cache_path: str = DEFAULT_CACHE,
+                           prompt: str = CAPTION_PROMPT) -> Callable[[str], str]:
     """Return a `caption_fn(image_path) -> str` that calls Gemini and
     caches on disk."""
     cache_file = Path(cache_path)
@@ -69,7 +87,7 @@ def make_gemini_caption_fn(model: str = "gemini-2.5-flash", cache_path: str = DE
                 part = gtypes.Part.from_bytes(data=data, mime_type="image/png")
                 resp = cli._client.models.generate_content(
                     model=cli.model,
-                    contents=[CAPTION_PROMPT, part],
+                    contents=[prompt, part],
                     config=gtypes.GenerateContentConfig(
                         temperature=0.0,
                         max_output_tokens=200,
@@ -98,3 +116,11 @@ def stub_caption_fn(image_path: str) -> str:
     base = os.path.basename(image_path)
     h = hashlib.sha1(image_path.encode()).hexdigest()[:6]
     return f"<stub caption {h} for {base}>"
+
+
+def make_exhaustive_caption_fn(model: str = "gemini-2.5-flash",
+                               cache_path: str = EXHAUSTIVE_CACHE) -> Callable[[str], str]:
+    """The unsteered captioner, with its OWN cache file -- the two prompts must
+    never share cache entries."""
+    return make_gemini_caption_fn(model=model, cache_path=cache_path,
+                                  prompt=EXHAUSTIVE_CAPTION_PROMPT)

@@ -1,0 +1,94 @@
+# Edit-instruction template, v1.
+#
+# Consumed by image-edit backends (Qwen-Image-Edit, future FLUX-Fill,
+# etc.) in `pipeline.generate` when --mode edit. Loaded by
+# `pipeline.prompts.load_edit`; the YAML bytes are hashed (sha256) and
+# the digest is stamped onto every manifest record.
+#
+# This template is intentionally short. The source image already
+# provides the studio-photo framing, lighting, and product type —
+# what we describe here is just the requested CHANGE.
+
+template: |
+  Edit this product photo so the result shows a {noun} in a {style}
+  aesthetic with accent colour {color}. Keep the same studio
+  composition (single product centred on a pure white background,
+  1:1 framing, soft even lighting). The new product must clearly
+  show this visible detail: {detail_phrase}. The product stands
+  alone on a COMPLETELY EMPTY pure white background — no walls,
+  no shelving, no pipes, no scaffolding, no rack, no cage, no
+  external holder; no picture frame around the image, no border,
+  no display case, no plinth, no pedestal, no shelf; do not add
+  other props, accessories, flowers, or a second object; do not
+  add text, watermarks, logos, or people. The product is the
+  ONLY object in the image.
+
+slots:
+  - noun
+  - style
+  - color
+  - detail_phrase
+
+# Passed to Qwen-Image-Edit-2509 as negative_prompt to enable CFG.
+# Mirrors anchor.yaml — without this, the edit model silently drops
+# CFG and our "do not add a frame / shelving" instruction is only
+# weakly enforced.
+negative_prompt: |
+  background structures, shelving, shelves, picture frame, frame
+  around the image, display case, plinth, pedestal, rack,
+  scaffolding, pipes, walls, second object, additional props,
+  flowers in the vase, plants, sticks, branches, coloured
+  background, gradient background, patterned background, fabric
+  drape, text, watermark, logo, person, shadow on background,
+  multiple objects
+
+# Re-use the anchor.yaml detail_phrases vocabulary by importing it
+# in PromptConfig. We list it again here so prompt_hash captures the
+# detail vocabulary used by edit-mode runs separately from t2i runs.
+# Keep this dictionary IDENTICAL to anchor.yaml `detail_phrases` —
+# edit them in lockstep, or the two prompt_hashes will drift in ways
+# the manifest can't distinguish cleanly.
+detail_phrases:
+  # core / upholstered furniture
+  slim_metal_legs:         "slim metal legs (chrome or brushed steel)"
+  geometric_topstitching:  "crisp geometric topstitching along the seams"
+  splayed_legs:            "splayed wooden legs angled outward"
+  brass_nailheads:         "a row of brass nailhead studs along the front"
+  fringe:                  "a fringe trim along the lower edge"
+  button_tufting:          "deep button tufting on the body"
+  ornate_carving:          "ornate carved scrollwork on the visible frame"
+  exposed_rivets:          "a neat row of visible rivets along a metal panel edge"
+  raw_steel_bracing:       "blackened steel bracing bars in a clean geometric pattern"
+  pipe_legs:               "matte black pipe legs with flange feet"
+  metal_caster_wheels:     "polished caster wheels under the base"
+  hidden_hardware:         "a continuous flush front face with sharp clean corner edges"
+  single_seam:             "one crisp continuous shadow line tracing the front face"
+  flush_panels:            "perfectly flat planar panels meeting at sharp 90° edges"
+  # ceramics
+  faceted_facets:                "multiple flat angular facets cut into the body"
+  incised_geometric_band:        "an incised geometric band carved into the surface"
+  painted_floral_motif:          "a painted floral motif on the visible face"
+  ornate_relief_band:            "an ornate relief band sculpted in the clay"
+  unglazed_clay_band:            "a matte unglazed clay band contrasting with a glazed body"
+  metal_strap_handle:            "a matte black metal strap handle riveted to the body"
+  seamless_glaze:                "a perfectly smooth glazed surface with a soft satin sheen"
+  # wall art
+  bold_geometric_shapes:         "bold geometric shapes filling the canvas"
+  thin_minimalist_frame:         "a thin minimalist black or metal frame"
+  ornate_gilded_frame:           "an ornate gilded frame with carved scrollwork"
+  raw_metal_frame:               "a slim blackened-metal frame"
+  frameless_canvas:              "a frameless edge-mounted canvas with a single broad colour field"
+  # rugs
+  bold_geometric_shapes_rug:     "bold geometric shapes woven across the rug"
+  medallion_motif:               "a central medallion motif"
+  visible_weave:                 "a coarse visible weave pattern"
+  raw_unfinished_edge:           "a clean cut binding along one side"
+  uniform_solid:                 "a deeply saturated single-tone solid colour field"
+  # lamps
+  exposed_bulb:                  "an exposed visible filament bulb"
+  brass_finial:                  "a polished brass finial at the top"
+  pipe_arm:                      "a blackened pipe arm connecting base to shade"
+  # tables / bookshelves
+  brass_drawer_pull:             "a brass drawer pull or knob on the visible face"
+  # cushions
+  rough_canvas_weave:            "a sturdy canvas weave with a clean visible thread pattern"

@@ -1,4 +1,4 @@
-"""Core schemas for VisMem-Diag.
+"""Core schemas for DMV-Bench.
 
 TaskCell defines ONE experimental unit on the 3-axis grid.
 Trial is the runtime data the agent sees (anchor + 4 candidates).

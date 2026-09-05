@@ -1,0 +1,16 @@
+# Optional: regenerating the 1,000-variant image catalogue from scratch.
+#
+# Not needed to run the benchmark -- `scripts/download_images.py` fetches the
+# released catalogue from Hugging Face. Install this only to rebuild it:
+#
+#   1. base studio photographs   -> pipeline/generate.py
+#   2. cue edits on top of them  -> scripts/generate_cue_edit_prompts.py
+#                                   scripts/run_cue_edits.py
+#
+# Both stages call Gemini 2.5 Flash Image (Nano Banana) and need a
+# GEMINI_API_KEY.
+
+diffusers==0.36.0
+google-genai>=1.20.0
+Pillow==12.1.1
+PyYAML==6.0.3

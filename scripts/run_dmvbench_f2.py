@@ -1,14 +1,15 @@
 #!/usr/bin/env python
-"""DMV-Bench Family 2 — Long-Horizon Online IC Injection runner.
+"""DMV-Bench Incidental-Cue runner.
 
-Generates N task spines (each a linear D-session encoding chain + recall
-probes), runs them for each memory baseline, aggregates the SR-vs-reach
-retention curve.
+Generates N chains (each a linear D-session encoding chain plus its recall
+probes), runs every requested memory system over them, and aggregates the
+TSR-vs-reach retention curve.
 
-Usage (pilot):
-  python scripts/run_dmvbench_f2.py --n-sessions 4 --n-tasks 1 --max-steps 25
-Usage (full):
-  python scripts/run_dmvbench_f2.py --n-sessions 5 --n-tasks 100 --max-steps 50
+  python scripts/run_dmvbench_f2.py --n-sessions 5 --seeds 0 \
+      --systems DualMem-a75 --vlm gemini-2.5-flash
+
+Session length is fixed by the chain generator (22-28 steps, drawn from the
+seed), not by a flag, so a chain is fully determined by its seed.
 """
 from __future__ import annotations
 
@@ -22,14 +23,16 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from tasks.generators.f2_online_ic import generate_f2_chain
 from dualmem.agent.f2_encode_agent import generate_task_trajectories
-from dualmem.agent.rollout_tree import run_f2_tasks
+from dualmem.agent.chain_runner import run_f2_tasks
 from dualmem.captioning import make_gemini_caption_fn
-from dualmem.inventory.nano_banana import NanoBanana
 from dualmem.metrics_f2 import aggregate_f2
 from dualmem.systems import make_system
 from dualmem.vlm import make_vlm
 
-DEFAULT_SYSTEMS = "NoMemory,TextOnly,Caption,CoMEM,DualChannel,HYMEM"
+# The seven architectures audited in the paper. DualMem-a75 is the headline
+# configuration (visual-dominant hybrid retrieval, alpha=0.75).
+DEFAULT_SYSTEMS = ("NoMemory,TextOnly,Caption,"
+                   "WorldMM-lite,MMA-lite,M2A-lite,DualMem-a75")
 # Trajectories are baseline-independent but **VLM-dependent** (different
 # backends browse differently). Override `--traj-dir` (or set
 # `F2_TRAJ_DIR`) to isolate, e.g. one cache per VLM:
@@ -45,7 +48,6 @@ def main() -> int:
     p.add_argument("--vlm", default="gemini-2.5-flash")
     p.add_argument("--n-sessions", type=int, default=5)
     p.add_argument("--n-tasks", type=int, default=1)
-    p.add_argument("--max-steps", type=int, default=50)
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--seeds", default=None,
                    help="explicit comma-separated spine seeds (parallel launcher "
@@ -53,7 +55,10 @@ def main() -> int:
     p.add_argument("--tag", default="f2")
     p.add_argument("--base-url", default="http://localhost:3000")
     p.add_argument("--text-encoder", default="sbert")
-    p.add_argument("--visual-encoder", default="clip")
+    p.add_argument("--visual-encoder", default="clip",
+                   help="visual encoder for the DualChannel/CLIPVision systems. "
+                        "Every DualMem-* variant pins SigLIP-2 regardless, so "
+                        "this does not affect the headline system.")
     p.add_argument("--out-dir", default=None,
                    help="explicit output dir (parallel launcher uses this)")
     p.add_argument("--gen-trajectories-only", action="store_true",
@@ -92,17 +97,19 @@ def main() -> int:
         seed_list = [int(s) for s in args.seeds.split(",") if s.strip() != ""]
     else:
         seed_list = [args.seed + i for i in range(args.n_tasks)]
-    tasks = [generate_f2_chain(seed=s, n_sessions=args.n_sessions,
-                               max_steps=args.max_steps)
+    tasks = [generate_f2_chain(seed=s, n_sessions=args.n_sessions)
              for s in seed_list]
     n_probes = sum(len(t.probes) for t in tasks)
-    print(f"[f2] {len(tasks)} task spines, D={args.n_sessions}, "
+    print(f"[f2] {len(tasks)} chains, D={args.n_sessions}, "
           f"{n_probes} recall probes total, {len(systems)} systems", flush=True)
     print(f"[f2] out_dir: {out_dir}", flush=True)
 
     vlm = make_vlm(args.vlm)
+    # The verbal channel is Gemini-captioned for BOTH back-ends, so the caption
+    # cache (or a GEMINI_API_KEY) is needed even for a Qwen-only run. The
+    # released cache covers all 1,000 catalogue images, so no key is required
+    # to reproduce the paper's configuration.
     caption_fn = make_gemini_caption_fn()
-    nano_banana = NanoBanana()
 
     pw_ctx = pw_page = None
     try:
@@ -123,7 +130,7 @@ def main() -> int:
     for task in tasks:
         tlog = []
         trajectories_by_task[task.task_id] = generate_task_trajectories(
-            task, vlm, nano_banana, traj_dir=TRAJ_DIR,
+            task, vlm, traj_dir=TRAJ_DIR,
             base_url=args.base_url, playwright_page=pw_page, log=tlog)
     print(f"[f2] trajectories ready ({time.time() - t0:.0f}s)", flush=True)
 

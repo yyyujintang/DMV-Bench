@@ -23,7 +23,7 @@ Flow per variant:
 
 Usage:
 
-  # text-to-image with Gemini (Phase A default — unchanged behaviour)
+  # text-to-image with Gemini (the default path)
   python3 -m pipeline.generate --all
 
   # explicit

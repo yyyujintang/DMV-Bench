@@ -1,33 +1,21 @@
-"""Memory baselines for DMV-Bench.
+"""Adapters for the external multimodal-agent-memory systems we compare against.
 
-In-house baselines:
-    TextOnly    — stores leakage text only
-    Caption     — stores VLM-generated caption only
-    DualChannel — caption + image (a.k.a. DualMem in the paper)
+Each is a faithful-as-feasible re-implementation of a published system inside
+the DMV-Bench harness; see `external/` for what was kept and what was dropped
+per adapter.
 
-External, model-agnostic 2025-2026 multimodal-agent-memory baselines
-(see `baselines/external/` and `doc/baselines_external_adapters.md`):
+    WorldMM  -- tri-modular memory (episodic / semantic / visual) with
+                adaptive iterative retrieval
+    M2A      -- dual-layer memory: a raw store plus a semantic-abstraction
+                store, agent-routed
+    MMA      -- reliability-aware retrieval, weighting items by source
+                credibility, temporal decay and conflict-aware consensus
 
-    WorldMM     — tri-modular memory + adaptive routing (CVPR 2026 Highlight)
-    M2A         — dual-layer (raw + semantic) hybrid memory (Feb 2026)
-    MMA         — reliability-aware retrieval (Feb 2026)
-
-Every baseline exposes:
-    name: str
-    encode(trial)
-    retrieve(query_text) -> Trial | None
-    oracle_inject(trial) -> {"text": str, "images": [paths]}
-    reset()
+They are wrapped into the shared encode/retrieve/inject interface by
+`dualmem/systems/external_wrap.py` and reached through
+`dualmem/systems/registry.py`.
 """
 
-from dualmem.baselines.text_only import TextOnly
-from dualmem.baselines.caption import Caption
-from dualmem.baselines.dual_channel import DualChannel
 from dualmem.baselines.external import WorldMMAdapter, M2AAdapter, MMAAdapter
-from dualmem.baselines.registry import BASELINES, make_baseline
 
-__all__ = [
-    "TextOnly", "Caption", "DualChannel",
-    "WorldMMAdapter", "M2AAdapter", "MMAAdapter",
-    "BASELINES", "make_baseline",
-]
+__all__ = ["WorldMMAdapter", "M2AAdapter", "MMAAdapter"]

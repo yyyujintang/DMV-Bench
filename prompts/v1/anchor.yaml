@@ -1,0 +1,177 @@
+# Anchor / product-image prompt configuration, v1.
+#
+# Loaded by `pipeline.prompts` at run-time. The YAML bytes are hashed
+# (sha256) and the digest is stored on every manifest record so we can
+# trace any image back to the exact prompt that produced it. Edit this
+# file → new prompt_hash → new manifest stamp.
+#
+# Schema:
+#   template:        the literal prompt string with {slot} placeholders
+#   slots:           required slot keys the template references
+#   form_features:   per-style silhouette / construction paragraph that
+#                    fills the {form} slot
+#   strict_clauses:  global "must-not-appear" rules baked into prompts
+#
+# The substitution is plain str.format. Slots must be supplied by the
+# caller; any missing slot raises KeyError at load time during tests.
+
+template: |
+  A photorealistic e-commerce product photo of a single {noun},
+  isolated on a COMPLETELY EMPTY pure white seamless studio
+  background with nothing else in the frame — no walls, no
+  shelving, no pipes, no scaffolding, no picture frame around
+  the image, no display case, no plinth, no pedestal. Soft even
+  studio lighting, centred composition, square 1:1 framing.
+  FORM (this is the dominant style cue and must be unambiguous): {form}
+  MATERIAL (visible from surface texture and finish): {material}.
+  ACCENT COLOUR (secondary, on the body): {color}.
+  REQUIRED VISIBLE DETAIL: {detail_phrase}. This must be clearly
+  visible on the front face of the product, large enough that a
+  viewer can name it without zooming.
+  The form features must be readable at a glance regardless of
+  colour — a viewer should classify the style from silhouette alone.
+  Strict: {strict_clauses}. The product fills ~70% of the frame and
+  is perfectly upright, the SINGLE object in the image.
+
+slots:
+  - noun
+  - form
+  - material
+  - color
+  - detail_phrase
+  - strict_clauses
+
+form_features:
+  modern: |
+    geometric and rectilinear silhouette, clean straight lines, flat
+    planes, slim metal-or-natural-wood accents, no ornamentation, no
+    curves on the body
+  minimalist: |
+    extremely sparse single-continuous-surface form, monolithic block-
+    like body, no visible joinery, no ornament, hidden hardware, the
+    simplest possible profile
+  vintage: |
+    curved silhouette with tufting, piping or carved/turned details,
+    rolled arms or scalloped edges, decorative trim, period mid-
+    century-or-earlier proportions
+  industrial: |
+    blackened-steel or aged-iron framework paired with warm-wood
+    accents, clean rectilinear silhouette with refined visible
+    hardware (kept neat, not crowded), matte metal finish, exposed
+    structural bracing in clean geometric lines, modern-loft
+    aesthetic — refined, not raw or rough
+
+# Human-readable phrases for the {detail_phrase} slot. Keyed by the
+# slug used in ProductVariant.incidentalDetails. These come from
+# tools/tag_incidental_details.py — keeping the phrasing in YAML so
+# they evolve with the prompt template, not the tagger.
+#
+# Pools:
+#   - "core" — textile-furniture pool (sofas / chairs / cushions and
+#     anywhere CATEGORY_OVERRIDES falls back to STYLE_DETAILS).
+#   - per-category extensions for non-textile cats (vases, lamps,
+#     wall_art, plant_pots, rugs, tables, bookshelves) added under
+#     Phase A.4 — see tools/tag_incidental_details.py CATEGORY_OVERRIDES.
+detail_phrases:
+  # core / upholstered furniture
+  slim_metal_legs:         "slim metal legs (chrome or brushed steel)"
+  geometric_topstitching:  "crisp geometric topstitching along the seams"
+  splayed_legs:            "splayed wooden legs angled outward"
+  brass_nailheads:         "a row of brass nailhead studs along the front"
+  fringe:                  "a fringe trim along the lower edge"
+  button_tufting:          "deep button tufting on the body"
+  ornate_carving:          "ornate carved scrollwork on the visible frame"
+  exposed_rivets:          "a neat row of visible rivets along a metal panel edge"
+  raw_steel_bracing:       "blackened steel bracing bars in a clean geometric pattern"
+  pipe_legs:               "matte black pipe legs with flange feet"
+  metal_caster_wheels:     "polished caster wheels under the base"
+  hidden_hardware:         "a continuous flush front face with sharp clean corner edges"
+  single_seam:             "one crisp continuous shadow line tracing the front face"
+  flush_panels:            "perfectly flat planar panels meeting at sharp 90° edges"
+  # ceramics (vases + plant_pots)
+  faceted_facets:                "multiple flat angular facets cut into the body"
+  incised_geometric_band:        "an incised geometric band carved into the surface"
+  painted_floral_motif:          "a painted floral motif on the visible face"
+  ornate_relief_band:            "an ornate relief band sculpted in the clay"
+  unglazed_clay_band:            "a matte unglazed clay band contrasting with a glazed body"
+  metal_strap_handle:            "a matte black metal strap handle riveted to the body"
+  seamless_glaze:                "a perfectly smooth glazed surface with a soft satin sheen"
+  # wall art
+  bold_geometric_shapes:         "bold geometric shapes filling the canvas"
+  thin_minimalist_frame:         "a thin minimalist black or metal frame"
+  ornate_gilded_frame:           "an ornate gilded frame with carved scrollwork"
+  raw_metal_frame:               "a slim blackened-metal frame"
+  frameless_canvas:              "a frameless edge-mounted canvas with a single broad colour field"
+  # rugs
+  bold_geometric_shapes_rug:     "bold geometric shapes woven across the rug"  # alias kept distinct
+  medallion_motif:               "a central medallion motif"
+  visible_weave:                 "a coarse visible weave pattern"
+  raw_unfinished_edge:           "a clean cut binding along one side"
+  uniform_solid:                 "a deeply saturated single-tone solid colour field"
+  # lamps
+  exposed_bulb:                  "an exposed visible filament bulb"
+  brass_finial:                  "a polished brass finial at the top"
+  pipe_arm:                      "a blackened pipe arm connecting base to shade"
+  # tables / bookshelves
+  brass_drawer_pull:             "a brass drawer pull or knob on the visible face"
+  # cushions
+  rough_canvas_weave:            "a sturdy canvas weave with a clean visible thread pattern"
+
+strict_clauses:
+  - no people
+  - no text
+  - no watermarks
+  - no logos
+  - no other products in frame
+  - no shadows on the background
+
+# Per-category form_features OVERRIDE the style-only form_features when
+# both `categorySlug` and `style` are present in spec. Added to fix the
+# 2026-05-15 vases-with-cage issue: the generic `industrial` form_features
+# above ("blackened-steel framework paired with warm-wood accents",
+# "exposed structural bracing") is correct vocabulary for chairs / tables
+# / bookshelves where the FRAME is part of the product — but for vases,
+# Qwen-Image interpreted "framework around it" literally and produced
+# wooden crates / metal cages around the vase. For each non-furniture
+# category, write form_features that describe what the OBJECT ITSELF
+# looks like — never reference external supports, frames, or hardware.
+form_features_by_category:
+  vases:
+    modern: |
+      a smooth tapered or cylindrical ceramic body, simple clean
+      neck, machine-perfect glazed surface, sharp clean edges,
+      no decoration on the body, the vase is the only object in
+      the photo and stands directly on the white floor
+    minimalist: |
+      a simple single-curve or straight-walled ceramic silhouette,
+      soft satin or matte glaze, no decoration, no handles, the
+      vase is the only object in the photo and stands directly on
+      the white floor
+    vintage: |
+      a curved decorated jar silhouette with hand-painted floral
+      motifs or shallow relief carving DIRECTLY on the ceramic
+      body, no picture frame around the image, no display case,
+      the vase is the only object in the photo and stands
+      directly on the white floor
+    industrial: |
+      a heavy matte stoneware or unglazed-clay vase body in a
+      simple amphora or jar silhouette, with rough industrial
+      surface texture (raw clay zones, matte black or charcoal
+      glaze) — the industrial quality is in the FINISH of the
+      vase itself, never in the surroundings, no pipes or
+      scaffolding or rack behind the vase, the vase is the only
+      object in the photo and stands directly on the white floor
+
+# Per-category extra strict_clauses — appended to the base list when
+# spec.categorySlug matches. Use these to spell out hallucination guards
+# that are specific to a category (e.g. "no external cage around a
+# ceramic vase").
+extra_strict_by_category:
+  vases:
+    - the background is completely empty pure white seamless
+    - no walls, no shelving, no pipes, no scaffolding, no rack, no cage, no frame, no holder
+    - no picture frame around the image, no border, no matting
+    - no display case, no plinth, no pedestal, no shelf, no table
+    - the vase is the ONLY object in the image
+    - nothing attached to the vase, no props, no flowers, no accessories, no second object
+    - no coloured or gradient background

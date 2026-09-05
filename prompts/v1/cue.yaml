@@ -1,0 +1,15 @@
+# Peripheral-cue prompt template, v1. Kept for the deprecated W3 cue
+# overlay generation pipeline (legacy/). Phase A does not run cue
+# generation — but the YAML is in place so a future revival of the
+# overlay system has a single prompt source of truth.
+
+template: |
+  A {cue_descriptor}, square, on a transparent background. The element
+  is photographed crisply from above, filling ~50% of the frame. No
+  frame, no shadow, no other elements. PNG with full alpha channel
+  where the background is not the cue itself. Photorealistic.
+
+slots:
+  - cue_descriptor
+
+# Per-cue overrides live in legacy/. Phase A does not load these.

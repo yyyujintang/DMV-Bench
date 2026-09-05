@@ -79,15 +79,35 @@ recall probe while a memory that retains pixels succeeds.</em></p>
    ```bash
    # Incidental-Cue task, J=5 chain, Gemini back-end, single seed:
    python scripts/run_dmvbench_f2.py \
-       --n-sessions 5 --max-steps 20 \
+       --n-sessions 5 \
        --vlm gemini-2.5-flash --base-url http://localhost:3000 \
        --systems DualMem-a75 --seeds 0 \
        --out-dir results/J5_DualMem-a75/
    ```
 
-   Writes `f2_summary.csv`, `f2_per_probe.csv`, and per-trial logs under
-   `--out-dir`. Switch to Qwen2.5-VL-7B via vLLM with
-   `--vlm qwen-vl-7b-vllm --base-url <vllm_url>`.
+   Writes `f2_summary.csv`, `f2_per_probe.csv`, and per-probe logs under
+   `--out-dir`. Session length is fixed by the chain generator (22-28 steps,
+   drawn from the seed), so a chain is fully determined by `--seeds` and
+   `--n-sessions`.
+
+6. **Qwen2.5-VL-7B back-end.** Serve the model with **vLLM 0.21.0**:
+
+   ```bash
+   python -m vllm.entrypoints.openai.api_server \
+       --model Qwen/Qwen2.5-VL-7B-Instruct \
+       --port 8000 --host 0.0.0.0 \
+       --max-model-len 16384 --gpu-memory-utilization 0.85 \
+       --max-num-seqs 64 --dtype bfloat16 \
+       --limit-mm-per-prompt '{"image":8}' --trust-remote-code
+   ```
+
+   then pass `--vlm qwen-vl-7b-vllm --base-url http://<host>:8000/v1`.
+
+   > `--limit-mm-per-prompt image=8` is required, not optional. A DualMem
+   > recall step sends the current-page image plus up to `k=5` retrieved
+   > memory images, so one request can carry six. Under the default limit of
+   > 1 those requests fail, the harness scores the probe as a miss, and every
+   > image-injecting system is silently deflated.
 
 ## Memory architectures audited
 
@@ -100,8 +120,9 @@ recall probe while a memory that retains pixels succeeds.</em></p>
 injects the top image and caption into the next-action VLM.</em></p>
 
 The seven systems share an `encode` / `retrieve` / `inject` interface
-(`dualmem/systems/`); DualMem and the four external multimodal baselines all
-operate under the same harness, so any per-cell gap reflects the memory
+(`dualmem/systems/`). DualMem and the three external multimodal baselines run
+under the same harness, driven through the same prompt surface
+(`dualmem/agent/prompting.py`), so any per-cell gap reflects the memory
 architecture rather than harness drift.
 
 | System              | Encode               | Retrieve                | Inject       |
@@ -123,20 +144,32 @@ an α suffix) defaults to the symmetric α=0.5 baseline.
 ## Task family
 
 DMV-Bench is built around a *single* task type, **Incidental Cue (IC)**,
-instantiated as a chain of $J$ short shopping sessions. In each session a
-memoryless ReAct agent browses for ~25 steps and visits ~12 products;
-cues are present in product images but are never mentioned in text. After
-the chain finishes, recall probes are issued at controlled reach $r$ (the
-session-distance between the visit and the probe), and the agent must
-emit `navigate(<product-url>)` to the cued product. The probe is scored
-by exact URL match against a bijective ground truth.
+instantiated as a chain of $J$ short shopping sessions.
 
-Long chains are evaluated over a **shared-prefix rollout tree** to amortise
-the cost of the early sessions: the first session is run once and $B$
-children branch from its memory snapshot, each branching $B$ ways in turn,
-to depth $J$. A tree of depth $J$ and branching factor $B$ costs
-$(B^J - 1)/(B-1)$ session runs but yields $\sim B^{J-1}$ root-to-leaf
-recall paths, roughly a $J\times$ saving over flat re-runs at $B{=}5$.
+Each session is one comparison-shopping task over **one product category**: a
+memoryless ReAct agent is asked to open at least three *style collections*
+within that category and as many distinct products as it can, over 22-28 steps.
+(Gemini 2.5 Flash averages 11.0 distinct products per session; Qwen2.5-VL-7B
+averages 4.2.) Cues sit in the product images and are never mentioned in text.
+
+Recall probes run after every session, from the bank state at that point. Each
+probe names one cue in words -- *"Earlier you saw a product that had a red wool
+scarf on it. Take me back to that exact product."* -- and the agent has 8 steps
+to `navigate` to it. Probes are read-only: they retrieve and navigate but never
+write to the bank, so they cannot perturb the chain. Scoring is exact URL match
+against a bijective ground truth: the 1,000 (object, colour) cue pairs map
+one-to-one onto the 1,000 products, so every probe has exactly one right answer.
+The diagnostic axis is **recall reach** $r$, the number of session boundaries
+between the visit and the probe.
+
+Long chains are cheap because **encoding sessions are cached and shared**.
+The encoding agent is memoryless, so session $j$ of a chain depends only on
+$(\text{seed}, j)$ and never on $J$: a $J{=}15$ chain reuses every session of
+the $J{=}5$ chain with the same seed, byte-for-byte. The same recorded
+trajectories are then replayed into *every* memory architecture, so within a
+cell each architecture is scored on an identical observation stream and an
+identical probe set. There is no branching and no memory-snapshot restore --
+a task is a linear chain.
 
 ## Data products
 
@@ -149,12 +182,22 @@ Two large artefact families live outside git:
   [`yyyujintang/DMV-Bench-Images`](https://huggingface.co/datasets/yyyujintang/DMV-Bench-Images);
   fetch with `scripts/download_images.py` (add `--with-base` for the
   originals), or rebuild with `pipeline/generate.py`.
-- **Family 2 task spines** (`tasks/pool_v2/f2_trees/*.json`): regenerate
-  with `tasks/generators/f2_online_ic.py` (the runner does this
-  automatically when `--seeds N` is passed).
+- **Chain specs** (`tasks/pool_v2/f2_trees/*.json`): regenerated by
+  `tasks/generators/f2_online_ic.py`, which the runner calls automatically
+  for every `--seeds` value. They are a deterministic function of the seed,
+  so there is nothing to download.
+- **Encoding trajectories** (`data/vismem_diag_v2/f2_trajectories*/`): built
+  on first run and cached per `(seed, session)`. They are back-end specific
+  (Gemini and Qwen browse differently), so keep one cache dir per back-end
+  via `--traj-dir`.
 
-Per-trial logs and trajectory caches are written under `results/` at run
-time and are not included.
+`data/vismem_diag_v2/_caption_cache.json` ships the Gemini caption for all
+1,000 catalogue images -- the exact captions behind the paper's `Caption` and
+`DualMem` runs. The verbal channel is Gemini-captioned for **both** back-ends,
+so without this cache even a Qwen-only run would need a `GEMINI_API_KEY`; with
+it, the paper's configuration reproduces without one.
+
+Per-probe logs are written under `results/` at run time and are not included.
 
 ## License
 

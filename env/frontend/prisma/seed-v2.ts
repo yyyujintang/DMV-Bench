@@ -27,7 +27,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const prisma = new PrismaClient();
 
-// frontend/prisma → repo VisMem-Diag/data/vismem_diag_v2/seed_v2.json
+// frontend/prisma → repo root data/vismem_diag_v2/seed_v2.json
 const defaultSeed = join(
   __dirname,
   "..",

@@ -1,6 +1,7 @@
-"""Phase A image-pipeline package.
+"""Catalogue image-generation pipeline.
 
-Build-time refactor under Phase A of the v2 → OSS-backend migration.
+Builds the 1,000-variant product catalogue: base studio photographs first,
+then the cue edits layered on top (see scripts/generate_cue_edit_prompts.py).
 The Gemini backend is preserved unchanged behaviour-wise; what's new is:
 
   - Prompts externalised to `prompts/v1/*.yaml` with content hashing
