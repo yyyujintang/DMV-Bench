@@ -1,0 +1,171 @@
+{
+  "version": "v2.0",
+  "description": "VMD-Bench v2 incidental-cue vocabulary. 100 disjoint object_types × 10 colors = 1000 unique cues, one per product image. Object_type is unique to ONE category (no cross-category overlap), so any (object, color) tuple identifies a unique product. Placement is a generation-time rendering hint only — not part of cue identity, not used in matching or user descriptions.",
+  "colors": [
+    "red", "blue", "green", "yellow", "white",
+    "black", "brown", "beige", "orange", "purple"
+  ],
+  "categories": {
+    "chair": {
+      "field": "clothing",
+      "objects": [
+        {"name": "wool scarf",       "placement": "draped over the backrest"},
+        {"name": "denim jacket",     "placement": "draped over the backrest"},
+        {"name": "baseball cap",     "placement": "resting on the seat"},
+        {"name": "cardigan",         "placement": "draped on the seat"},
+        {"name": "leather belt",     "placement": "looped over the armrest"},
+        {"name": "silk tie",         "placement": "hung over the backrest"},
+        {"name": "wool beanie",      "placement": "resting on the seat"},
+        {"name": "cotton hoodie",    "placement": "draped over the backrest"},
+        {"name": "leather gloves",   "placement": "placed on the seat"},
+        {"name": "knit socks",       "placement": "folded on the seat"}
+      ]
+    },
+    "sofa": {
+      "field": "electronics_and_relaxation",
+      "objects": [
+        {"name": "paperback book",     "placement": "open on the cushion"},
+        {"name": "tv remote",          "placement": "on the armrest"},
+        {"name": "wireless headphones","placement": "resting on the cushion"},
+        {"name": "laptop",             "placement": "open on the cushion"},
+        {"name": "tablet",             "placement": "leaning against the backrest"},
+        {"name": "mini throw pillow",  "placement": "tucked into the corner"},
+        {"name": "fleece blanket",     "placement": "folded across the armrest"},
+        {"name": "eye sleep mask",     "placement": "on the cushion"},
+        {"name": "neck pillow",        "placement": "leaning against the armrest"},
+        {"name": "gaming controller",  "placement": "on the cushion"}
+      ]
+    },
+    "lamp": {
+      "field": "desk_stationery",
+      "objects": [
+        {"name": "framed photo",  "placement": "propped against the base"},
+        {"name": "alarm clock",   "placement": "next to the base"},
+        {"name": "paper clip",    "placement": "on the base"},
+        {"name": "sticky tape roll","placement": "next to the base"},
+        {"name": "wall calendar (small)", "placement": "propped against the base"},
+        {"name": "spiral notebook","placement": "lying next to the base"},
+        {"name": "wooden ruler",  "placement": "laid against the base"},
+        {"name": "stapler",       "placement": "next to the base"},
+        {"name": "fountain pen",  "placement": "on the base"},
+        {"name": "pencil case",   "placement": "next to the base"}
+      ]
+    },
+    "rug": {
+      "field": "footwear_and_play",
+      "objects": [
+        {"name": "canvas slippers", "placement": "placed on the rug"},
+        {"name": "sneakers",        "placement": "placed on the rug"},
+        {"name": "tennis ball",     "placement": "resting on the rug"},
+        {"name": "plush teddy",     "placement": "sitting on the rug"},
+        {"name": "rolled yoga mat", "placement": "lying on the rug"},
+        {"name": "dog rope toy",    "placement": "on the rug"},
+        {"name": "cat mouse toy",   "placement": "on the rug"},
+        {"name": "baby rattle",     "placement": "on the rug"},
+        {"name": "soccer ball",     "placement": "on the rug"},
+        {"name": "ballet flats",    "placement": "placed on the rug"}
+      ]
+    },
+    "vase": {
+      "field": "flora",
+      "objects": [
+        {"name": "satin ribbon bow",   "placement": "tied around the neck"},
+        {"name": "dried rose",         "placement": "tucked at the rim"},
+        {"name": "fresh tulip stem",   "placement": "in the vase"},
+        {"name": "eucalyptus sprig",   "placement": "in the vase"},
+        {"name": "baby's-breath cluster","placement": "in the vase"},
+        {"name": "pampas plume",       "placement": "in the vase"},
+        {"name": "orchid stem",        "placement": "in the vase"},
+        {"name": "cherry blossom branch","placement": "in the vase"},
+        {"name": "lily-of-the-valley", "placement": "in the vase"},
+        {"name": "dried wheat sheaf",  "placement": "in the vase"}
+      ]
+    },
+    "plant_pot": {
+      "field": "garden_ornaments",
+      "objects": [
+        {"name": "ceramic gnome",      "placement": "next to the pot"},
+        {"name": "mushroom figurine",  "placement": "in the soil"},
+        {"name": "butterfly stake",    "placement": "in the soil"},
+        {"name": "ladybug ornament",   "placement": "on the rim"},
+        {"name": "wooden plant tag",   "placement": "in the soil"},
+        {"name": "polished pebble pile","placement": "on the soil surface"},
+        {"name": "miniature flag",     "placement": "in the soil"},
+        {"name": "snail figurine",     "placement": "next to the pot"},
+        {"name": "fairy door",         "placement": "leaning against the pot"},
+        {"name": "mini wind chime",    "placement": "hanging from the rim"}
+      ]
+    },
+    "cushion": {
+      "field": "personal_accessories",
+      "objects": [
+        {"name": "eyeglasses",          "placement": "on the cushion"},
+        {"name": "wristwatch",          "placement": "on the cushion"},
+        {"name": "ornate hair clip",    "placement": "on the cushion"},
+        {"name": "silk hair scrunchie", "placement": "on the cushion"},
+        {"name": "mini jewelry box",    "placement": "on the cushion"},
+        {"name": "silver locket",       "placement": "on the cushion"},
+        {"name": "crystal pendant",     "placement": "on the cushion"},
+        {"name": "pearl earring",       "placement": "on the cushion"},
+        {"name": "silk hand fan",       "placement": "leaning on the cushion"},
+        {"name": "small hairbrush",     "placement": "on the cushion"}
+      ]
+    },
+    "table": {
+      "field": "tableware",
+      "objects": [
+        {"name": "ceramic mug",       "placement": "on the table"},
+        {"name": "dinner plate",      "placement": "on the table"},
+        {"name": "fruit bowl",        "placement": "on the table"},
+        {"name": "wine glass",        "placement": "on the table"},
+        {"name": "candle in holder",  "placement": "on the table"},
+        {"name": "cutlery set",       "placement": "laid on the table"},
+        {"name": "salt shaker",       "placement": "on the table"},
+        {"name": "linen napkin",      "placement": "folded on the table"},
+        {"name": "sugar bowl",        "placement": "on the table"},
+        {"name": "butter dish",       "placement": "on the table"}
+      ]
+    },
+    "bookshelf": {
+      "field": "display_objects",
+      "objects": [
+        {"name": "bronze bookend",     "placement": "on a shelf"},
+        {"name": "hourglass",          "placement": "on a shelf"},
+        {"name": "miniature globe",    "placement": "on a shelf"},
+        {"name": "snow globe",         "placement": "on a shelf"},
+        {"name": "antique brass key",  "placement": "on a shelf"},
+        {"name": "music box",          "placement": "on a shelf"},
+        {"name": "miniature telescope","placement": "on a shelf"},
+        {"name": "ship-in-bottle",    "placement": "on a shelf"},
+        {"name": "pendulum clock (small)","placement": "on a shelf"},
+        {"name": "wooden abacus",      "placement": "on a shelf"}
+      ]
+    },
+    "wall_art": {
+      "field": "wall_annotations",
+      "objects": [
+        {"name": "sticky note",         "placement": "attached to a corner"},
+        {"name": "postcard",            "placement": "tucked behind a corner"},
+        {"name": "polaroid photo",      "placement": "tucked behind a corner"},
+        {"name": "binder clip",         "placement": "clipped to a corner"},
+        {"name": "mini wreath",         "placement": "hung beside the frame"},
+        {"name": "enamel charm",        "placement": "hanging from a corner"},
+        {"name": "washi tape roll",     "placement": "stuck on a corner"},
+        {"name": "brass push pin",      "placement": "pressed on a corner"},
+        {"name": "paper origami bow",   "placement": "stuck on a corner"},
+        {"name": "adhesive wall sticker","placement": "applied next to the frame"}
+      ]
+    }
+  },
+  "uniqueness_verification": {
+    "total_categories": 10,
+    "objects_per_category": 10,
+    "colors": 10,
+    "total_unique_cues": 1000,
+    "cross_category_object_overlap": "none — each object name appears in exactly one category"
+  },
+  "allocation_algorithm": {
+    "description": "Bijective allocation: within each category, 100 (style, prod) slots map 1:1 to 100 (object, color) cues. style_idx selects the cue_object; prod_idx within that style selects the color. Globally unique across the inventory because object_types are disjoint across categories.",
+    "pseudocode": "for cat in 10 categories:\n  for style_idx in 0..9:\n    obj = cat.objects[style_idx]               # one object per style\n    for prod_idx in 0..9:\n      color = colors[prod_idx]                  # 10 colors sweep within the style\n      cue = (obj, color)                        # unique within cat, unique globally"
+  }
+}

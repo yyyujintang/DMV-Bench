@@ -1,60 +1,59 @@
-# Phase A foundation refactor — pinned dependencies for the image
-# generation pipeline. These are the versions currently installed at
-# user level on the the HPC cluster; pin them so a future deploy or a
-# fresh checkout produces the same Phase A artifacts.
+# DMV-Bench + DualMem -- benchmark and agent dependencies.
 #
-# Phase B (open-source backend) will extend this list with the actual
-# diffusion model dependencies. For now, diffusers + transformers are
-# already used by the CLIP cache, so they appear here.
+# These are the versions the paper's experiments ran on. To regenerate the
+# image catalogue from scratch instead of downloading it, also install
+# requirements-imagegen.txt.
+#
+# GPU note: `torch` below resolves the CPU/default build from PyPI. For a CUDA
+# box install the matching wheel first, e.g.
+#     pip install torch --index-url https://download.pytorch.org/whl/cu128
+# The encoders fall back to CPU otherwise.
 
-# Image-pipeline core
-PyYAML==6.0.3
-Pillow==12.1.1
-
-# CLIP backbone (for QC text-image similarity + downstream cache)
-# NOTE: the paper used the CUDA 12.8 build (torch==2.10.0+cu128), which is
-# served from the PyTorch index, not PyPI. For a GPU install run:
-#   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
-# The bare version below resolves the CPU/default build from PyPI.
-torch==2.10.0
+# ---------------------------------------------------------------------
+# Core
+torch>=2.10
 transformers==4.57.6
-diffusers==0.36.0
-
-# Pydantic schema (used by tasks/schema/*)
 pydantic==2.11.10
-
-# Test runner (Python-side; vitest is in package.json for the TS side)
-pytest==8.3.3
+Pillow==12.1.1
+PyYAML==6.0.3
 
 # ---------------------------------------------------------------------
 # Memory encoders + retrieval
 #
-# SBERT verbal encoder for DualMem / Caption / text baselines. SigLIP-2,
-# CLIP and DINOv2/v3 visual encoders load through `transformers` (pinned
-# above), so only the sentence-transformers wrapper is listed here.
+# SBERT is the verbal encoder for DualMem / Caption / the text baselines.
+# SigLIP-2, CLIP and DINOv2/v3 load through `transformers` (pinned above),
+# so only the sentence-transformers wrapper is listed here.
 sentence-transformers>=3.0.0
-# huggingface_hub backs both the encoder weight downloads and
-# scripts/download_images.py (catalogue fetch).
+# Backs both encoder-weight downloads and scripts/download_images.py.
 huggingface_hub>=0.34.0
 
 # ---------------------------------------------------------------------
 # Agent harness
 #
-# The ReAct shopping agent and the Family-2 recall probes drive the live
-# Next.js storefront through a headless Chromium via Playwright. After
-# `pip install`, fetch the browser binary once per machine:
+# The ReAct shopping agent and the recall probes drive the live Next.js
+# storefront through a headless Chromium. After `pip install`, fetch the
+# browser binary once per machine:
 #     playwright install chromium
 playwright>=1.44.0
 
 # ---------------------------------------------------------------------
-# VLM backends
+# VLM back-ends
 #
-# Closed-source API clients
+# Closed-source API clients.
 google-genai>=1.20.0
 openai>=1.61.0
 anthropic>=0.45.0
-# Open-source local: Qwen2.5-VL-3B / 7B-Instruct
-# qwen-vl-utils is the official vision-preprocessing helper from QwenLM.
+#
+# Open-source: Qwen2.5-VL-7B-Instruct, served through vLLM's
+# OpenAI-compatible API. This is the version the paper's Qwen results used;
+# see the README for the exact `api_server` command (the
+# `--limit-mm-per-prompt image=8` flag is required). Installing vLLM resolves
+# its own Torch build -- let it, rather than pinning Torch against it.
+vllm==0.21.0
+# Official vision preprocessing helper from QwenLM (used by the local
+# transformers path in dualmem/vlm/qwen_vl.py).
 qwen-vl-utils>=0.0.10
-# transformers and torch are already pinned above; Qwen2.5-VL needs >=4.49
-# which we satisfy with 4.57.6.
+
+# ---------------------------------------------------------------------
+# Tests
+pytest==8.3.3

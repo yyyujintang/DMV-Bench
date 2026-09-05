@@ -4,7 +4,7 @@ produce a source image on demand.
 Pairs naturally with an edit-mode backend: e.g. Gemini t2i produces a
 clean studio shot, then Qwen-Image-Edit refines it. The cost of the
 t2i call is amortised via a disk cache under
-`VisMem-Diag/data/vismem_diag/images_history/source-cache/`, keyed by
+`data/vismem_diag/images_history/source-cache/`, keyed by
 the t2i prompt_hash + urlHash, so iterating on the edit backend
 doesn't re-invoke the upstream backend.
 """

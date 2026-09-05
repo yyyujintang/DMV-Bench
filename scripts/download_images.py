@@ -2,7 +2,7 @@
 """Fetch the DMV-Bench catalogue images from the Hugging Face Hub.
 
 The ~1,000-variant home-furnishing catalogue (~1.5 GB) is too large to ship in
-git, so it is hosted as a Hub *dataset*. Design v6: every storefront product
+git, so it is hosted as a Hub *dataset*. Every storefront product
 carries a unique baked-in incidental cue, so the runner and the storefront use
 the same `with_cue` image set. The Hub dataset holds two sets:
 

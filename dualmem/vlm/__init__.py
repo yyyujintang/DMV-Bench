@@ -1,4 +1,4 @@
-"""VLM clients for VisMem-Diag.
+"""VLM clients for DMV-Bench.
 
 Uniform `VLMClient` protocol — every backbone exposes:
   - `four_afc(anchor, candidates, instructions)` returning `VLMResponse`

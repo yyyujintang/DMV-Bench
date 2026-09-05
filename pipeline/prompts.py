@@ -169,7 +169,7 @@ class PromptConfig:
 
 
 def load_anchor() -> PromptConfig:
-    """Module-level loader for the text-to-image (Phase A) template;
+    """Module-level loader for the text-to-image template;
     cached per process."""
     if not hasattr(load_anchor, "_cache"):
         load_anchor._cache = PromptConfig(ANCHOR_PATH)  # type: ignore[attr-defined]
@@ -178,9 +178,9 @@ def load_anchor() -> PromptConfig:
 
 def load_edit() -> PromptConfig:
     """Module-level loader for the instruction template used by image-
-    edit backends (Phase B). Falls back to the anchor template when
+    edit backends. Falls back to the anchor template when
     edit.yaml is absent so the t2i CLI path keeps working before
-    Phase B is rolled out."""
+    no edit template is present."""
     if not hasattr(load_edit, "_cache"):
         path = EDIT_PATH if EDIT_PATH.exists() else ANCHOR_PATH
         load_edit._cache = PromptConfig(path)  # type: ignore[attr-defined]

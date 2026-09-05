@@ -1,4 +1,4 @@
-"""Qwen-Image-Edit backend (Phase B).
+"""Qwen-Image-Edit backend.
 
 Defaults to the newer **Qwen-Image-Edit-2509** ("Plus") variant on
 HuggingFace, paired with `QwenImageEditPlusPipeline`. The older

@@ -49,7 +49,11 @@ data/vismem_diag/
 # ---- Runtime caches written by the runner (regenerated on demand) ----
 data/vismem_diag_v2/f2_trajectories/
 data/vismem_diag_v2/f2_trajectories_qwen/
-data/vismem_diag_v2/_caption_cache.json
+# The 1,000 catalogue captions ARE released (364 KB) -- they are the exact
+# verbal channel behind the paper's Caption and DualMem runs, and shipping
+# them means reproducing the paper needs no Gemini key for captioning.
+!data/vismem_diag_v2/_caption_cache.json
+data/vismem_diag_v2/_caption_cache_*.json
 
 # ---- Per-trial results / logs (written at runtime) ----
 results/

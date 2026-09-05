@@ -1,4 +1,4 @@
-"""Pluggable encoders for VisMem-Diag.
+"""Pluggable encoders for DMV-Bench.
 
 A VisualEncoder maps an image (and optionally a query string) into a dense
 vector. Encoders are the visual/textual representation backbone of the

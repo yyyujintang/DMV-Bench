@@ -1,34 +1,31 @@
-"""Family-2 encoding-trajectory generator — a REAL ReAct shopping agent.
+"""Encoding-trajectory generator -- a real ReAct shopping agent.
 
-The advisor's concern with a scripted browse walk: it is artificial. So the
-encoding trajectory is produced by a genuine agentic run — a VLM ReAct agent
-doing a concrete WebArena-style shopping task on the furniture store.
-
-ONE SESSION = ONE short WebArena-style task: browse a single category for ~10-20
-steps and add a product. Sessions are deliberately SHORT — the long horizon
-comes from CHAINING MANY sessions, not from long sessions. Within a session the
-agent sees its WHOLE history (the session is short enough).
+ONE SESSION = ONE short WebArena-style shopping task: browse a single category
+for ~22-28 steps and open as many distinct products as possible. Sessions are
+deliberately SHORT; the long horizon comes from CHAINING many of them, not from
+long sessions. Within a session the agent sees its whole history.
 
 The encoding agent uses NO memory, so a session trajectory depends only on
-(seed, session_idx) — it is generated ONCE, recorded, and replayed into every
-baseline's memory bank; J sessions can be re-composed/extended freely. A cue is
-injected INCIDENTALLY at a random step (the agent is not told).
+(seed, session_idx). It is generated ONCE, recorded, and replayed into every
+memory system under test, which is what makes the comparison paired and lets a
+J=5 and a J=15 chain on the same seed share their early sessions exactly.
+
+Cues are baked into the catalogue images at build time, so the agent simply
+sees them; nothing is injected at run time and the agent is never told they
+exist.
 """
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, dataclass, field
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional, Tuple
 
 from dualmem.agent.actions import parse_react_response
-from dualmem.agent.dmvbench_live_runner import (
+from dualmem.agent.prompting import (
     SYSTEM_PROMPT_TEMPLATE, PRODUCT_RE, _build_prompt,
 )
-from dualmem.agent.f2_session_runner import (
-    InjectionGT, ONLINE_CUE_ROOT, _exec_action, _f2_obs, _rel, _registry,
-    _safe, base_image_for, online_cue_edit,
-)
+from dualmem.agent.f2_session_runner import _exec_action, _f2_obs, _rel, _registry
 
 # A WebArena-style comparison-shopping task: browse widely before deciding, so
 # each session encodes ~12 distinct products (a bigger memory bank). Product
@@ -59,11 +56,10 @@ SESSION_TASK = (
 
 @dataclass
 class EncodeTrajectory:
-    """The recorded encoding trajectory of one session — replayed into every
-    baseline's memory bank."""
+    """The recorded encoding trajectory of one session -- replayed into every
+    memory system's bank."""
     session_idx: int
     visited: List[Tuple[str, str]] = field(default_factory=list)  # (url_hash, image_path)
-    injection: Optional[InjectionGT] = None
     n_steps: int = 0
     vlm_calls: int = 0
 
@@ -73,43 +69,24 @@ def _noun(cat: str) -> str:
         cat, cat.replace("_", " "))
 
 
-def _inject(uh: str, inj, nano_banana, log, step) -> Optional[InjectionGT]:
-    """Online cue-edit the cue onto product `uh`; returns the recorded GT."""
-    base_img = base_image_for(uh)
-    if base_img is None:
-        return None
-    out = ONLINE_CUE_ROOT / f"{_safe(inj.cue_id)}__{uh}.png"
-    try:
-        cued = online_cue_edit(base_img, inj.cue_object, inj.cue_color,
-                               inj.cue_placement, out, nano_banana)
-        log.append(f"  [step {step}] INJECTED {inj.cue_id} -> /product/{uh}")
-        return InjectionGT(
-            cue_id=inj.cue_id, cue_object=inj.cue_object, cue_color=inj.cue_color,
-            product_url_hash=uh, product_url=f"/product/{uh}",
-            injection_step=step, cued_image_path=str(cued))
-    except Exception as e:
-        log.append(f"  [step {step}] injection edit failed: {e}")
-        return None
-
-
 def run_encode_session(
     session_spec,                # SessionSpec
     *,
     vlm,
-    nano_banana,
     base_url: str = "http://localhost:3000",
     playwright_page=None,
     log: Optional[list] = None,
 ) -> EncodeTrajectory:
     """Run ONE short encoding session: a real ReAct agent browses one category
     for `session_spec.n_steps` steps (no memory, whole-session history).
-    Records every product page viewed; injects the cue incidentally."""
+    Records every product page it viewed, with the image the storefront
+    served -- which already carries that product's cue."""
     log = log if log is not None else []
     cat = session_spec.shopping_list[0]
     n_steps = session_spec.n_steps
     traj = EncodeTrajectory(session_idx=session_spec.session_idx)
     log.append(f"--- ENCODE session {session_spec.session_idx} | category={cat} | "
-               f"n_steps={n_steps} (v6: every product carries its own baked-in cue) ---")
+               f"n_steps={n_steps} ---")
 
     if playwright_page is not None:
         try:
@@ -124,8 +101,8 @@ def run_encode_session(
         cur = _rel(playwright_page.url, base_url) if playwright_page else "/"
         obs = _f2_obs(cur)
         m = PRODUCT_RE.match(obs.url)
-        # v6: no online injection — the cue is already baked into the
-        # storefront image (`_f2_obs` resolves url -> images/with_cue/...).
+        # The cue is already in the storefront image; `_f2_obs` resolves the
+        # URL to that same file, so recording the path is all that is needed.
         if m:
             traj.visited.append((m.group(1), obs.image_path or ""))
 
@@ -177,11 +154,10 @@ def run_encode_session(
         elif playwright_page is not None:
             _exec_action(playwright_page, action, base_url, log)
 
-    # v6: no fallback injection — every visited product is already cue-bearing.
     traj.n_steps = n_steps
     distinct = len({u for u, _ in traj.visited})
-    log.append(f"  ENCODE done: {n_steps} steps, {len(traj.visited)} product views "
-               f"({distinct} distinct)  [v6: every product cue-bearing]")
+    log.append(f"  ENCODE done: {n_steps} steps, {len(traj.visited)} product "
+               f"views ({distinct} distinct)")
     return traj
 
 
@@ -193,23 +169,21 @@ def save_trajectory(traj: EncodeTrajectory, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     d = {"session_idx": traj.session_idx,
          "visited": [list(v) for v in traj.visited],
-         "injection": asdict(traj.injection) if traj.injection else None,
          "n_steps": traj.n_steps, "vlm_calls": traj.vlm_calls}
     path.write_text(json.dumps(d, indent=2))
 
 
 def load_trajectory(path: Path) -> EncodeTrajectory:
     d = json.loads(Path(path).read_text())
-    inj = InjectionGT(**d["injection"]) if d.get("injection") else None
     return EncodeTrajectory(
         session_idx=d["session_idx"],
         visited=[tuple(v) for v in d["visited"]],
-        injection=inj, n_steps=d["n_steps"], vlm_calls=d.get("vlm_calls", 0))
+        n_steps=d["n_steps"], vlm_calls=d.get("vlm_calls", 0))
 
 
 def generate_task_trajectories(
-    task,                        # RolloutTreeTask (linear spine)
-    vlm, nano_banana, *,
+    task,                        # ChainTask
+    vlm, *,
     traj_dir: Path,
     base_url: str = "http://localhost:3000",
     playwright_page=None,
@@ -231,8 +205,7 @@ def generate_task_trajectories(
             log.append(f"  [traj] session {sess.session_idx}: cached "
                        f"({len(traj.visited)} views)")
         else:
-            traj = run_encode_session(sess, vlm=vlm, nano_banana=nano_banana,
-                                      base_url=base_url,
+            traj = run_encode_session(sess, vlm=vlm, base_url=base_url,
                                       playwright_page=playwright_page, log=log)
             save_trajectory(traj, cache)
         out.append(traj)

@@ -5,7 +5,7 @@
  * annotation API routes can read them at runtime.
  *
  * Source: <repo>/tasks/pool/validated/{NC,SA,IC,VL}/*.json
- * Dest:   <repo>/VisMem-Diag/env/frontend/public/tasks/validated/<same shape>
+ * Dest:   <repo>/env/frontend/public/tasks/validated/<same shape>
  *
  * Idempotent: re-writes existing files only when content differs (so dev
  * server file-watchers don't trigger a needless rebuild on every npm run dev).
@@ -17,7 +17,7 @@ import path from "node:path";
 
 const SUB_TASKS = ["NC", "SA", "IC", "VL", "PD"];
 
-// frontend lives at <repo>/VisMem-Diag/env/frontend, this script is at
+// frontend lives at <repo>/env/frontend, this script is at
 // frontend/scripts/, so the source pool is four levels up.
 const FRONTEND = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const SRC_ROOT = path.resolve(FRONTEND, "..", "..", "..", "tasks", "pool", "validated");

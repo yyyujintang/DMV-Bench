@@ -1,33 +1,31 @@
-"""Family-2 generator — Per-Product IC (design v6).
+"""Incidental-Cue chain generator.
 
-Emits ONE `RolloutTreeTask` (a linear spine, J-INDEPENDENT):
+Emits one `ChainTask`: a linear chain of D sessions, each a short WebArena-style
+comparison-shopping task over one category (22-28 steps). Session j depends only
+on (seed, j), never on D, so chains of different lengths built from the same
+seed share their early sessions byte-for-byte -- this is what lets a J=15 run
+reuse every session of the J=5 run, and what makes the comparison across memory
+systems paired.
 
-  - a linear chain of D sessions; session j is one WebArena-style comparison
-    shopping task (~22-28 steps, one category);
-  - NO pre-chosen cue per session — every product the agent autonomously
-    views already carries a unique visual cue baked into the storefront image
-    (the website serves `images/with_cue/<cat>/<style>/<idx>.png`, and
-    `data/vismem_diag_v2/cue_registry.json` records the (object, color) per
-    url_hash);
-  - recall probes are FILLED AT RUN TIME from the recorded encoding
-    trajectory (one probe per (at_session j, target_session j-r, viewed
-    product u)), so |IC|/chain = k·N and |Q|/chain ≈ k·N(N-1)/2.
-
-See doc/f2_task_design_v6.png.
+No cue is chosen here. Every product the agent may open already carries a unique
+visual cue baked into the storefront image, recorded per url_hash in
+`data/vismem_diag_v2/cue_registry.json`. Recall probes are therefore filled in at
+run time from the recorded trajectory, one per (probe session, target session,
+viewed product).
 """
 from __future__ import annotations
 
 import random
 from pathlib import Path
 
-from ..schema.rollout_tree_task import (
-    RecallProbe, RolloutTreeTask, SessionSpec, save_rollout_tree,
+from ..schema.chain_task import (
+    ChainTask, RecallProbe, SessionSpec, save_chain_task,
 )
 
-GENERATOR_VERSION = "f2.per_product_ic.v6"
+GENERATOR_VERSION = "ic.chain.v1"
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-F2_POOL = REPO_ROOT / "tasks" / "pool_v2" / "f2_trees"
+CHAIN_POOL = REPO_ROOT / "tasks" / "pool_v2" / "f2_trees"
 
 CATEGORIES = ["chair", "sofa", "lamp", "cushion", "vase",
               "rug", "table", "bookshelf", "plant_pot", "wall_art"]
@@ -36,25 +34,22 @@ CATEGORIES = ["chair", "sofa", "lamp", "cushion", "vase",
 def generate_f2_chain(
     seed: int = 0,
     n_sessions: int = 5,
-    max_steps: int = 50,
     pool_root: Path | None = None,
-) -> RolloutTreeTask:
-    """Build one Family-2 (v6) task — a linear D-session spine.
+) -> ChainTask:
+    """Build one D-session chain.
 
-    Session specs are J-INDEPENDENT: session j depends only on (seed, j),
-    never on n_sessions. So a J=5 task and a J=10 task with the same seed
-    share sessions 0-4 byte-for-byte. The `probes` list is left EMPTY here —
-    it is filled at run time once the agent has actually browsed (since which
-    products carry the recall targets is autonomous)."""
-    # category order depends ONLY on seed (J-independent)
+    Session specs depend ONLY on (seed, j), never on n_sessions, so a J=5 and a
+    J=10 chain with the same seed share sessions 0-4 byte-for-byte. `probes` is
+    left empty here and filled at run time once the agent has actually browsed."""
+    # category order depends ONLY on seed (length-independent)
     seed_rng = random.Random(f"f2.seed.{seed}")
     cat_order = seed_rng.sample(CATEGORIES, len(CATEGORIES))
 
     sessions: list[SessionSpec] = []
     for j in range(n_sessions):
-        # per-session RNG — J-independent
+        # per-session RNG -- length-independent
         srng = random.Random(f"f2.session.{seed}.{j}")
-        # ~22-28 steps comparison-shopping → ~12 distinct products / session
+        # 22-28 steps of comparison shopping -> ~12 distinct products / session
         n_steps = srng.randint(22, 28)
         sessions.append(SessionSpec(
             session_idx=j,
@@ -62,21 +57,18 @@ def generate_f2_chain(
             n_steps=n_steps,
         ))
 
-    task = RolloutTreeTask(
+    task = ChainTask(
         task_id=f"f2_chain_d{n_sessions}_s{seed:04d}",
-        n_sessions=n_sessions, max_steps_per_session=max_steps,
+        n_sessions=n_sessions,
         sessions=sessions, probes=[],   # filled at run time from trajectories
-        metadata={
-            "generator": GENERATOR_VERSION, "seed": seed,
-            "design": "v6_per_product_ic",
-        },
+        metadata={"generator": GENERATOR_VERSION, "seed": seed},
     )
-    save_rollout_tree(task, pool_root or F2_POOL)
+    save_chain_task(task, pool_root or CHAIN_POOL)
     return task
 
 
 def build_probes_from_trajectories(
-    task: RolloutTreeTask,
+    task: ChainTask,
     trajectories_by_session: dict[int, list[tuple[str, str]]],
     cue_lookup: dict[str, dict],
     mc_probes: int = 0,
@@ -166,19 +158,13 @@ def build_probes_from_trajectories(
     return probes
 
 
-# Back-compat alias for the entry point.
-generate_f2_tree = generate_f2_chain
-
-
 def _cli():
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--n-sessions", type=int, default=5)
-    p.add_argument("--max-steps", type=int, default=50)
     args = p.parse_args()
-    t = generate_f2_chain(seed=args.seed, n_sessions=args.n_sessions,
-                          max_steps=args.max_steps)
+    t = generate_f2_chain(seed=args.seed, n_sessions=args.n_sessions)
     print(f"[ok] {t.task_id}  sessions={t.n_sessions}  "
           f"(probes filled at run time)")
 

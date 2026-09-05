@@ -1,7 +1,7 @@
 """VWA shopping site source provider.
 
 Reads real product photos from
-`VisMem-Diag/data/vismem_diag/vwa_cache/<categorySlug>/NN.jpg` and
+`data/vismem_diag/vwa_cache/<categorySlug>/NN.jpg` and
 returns them as the edit source. The cache is populated by
 `tools.scrape_vwa_products` (one-time scrape, runs offline thereafter).
 
@@ -34,7 +34,7 @@ class VWASourceProvider:
     # but inherits the source's clean studio composition).
     #
     # Defaults to 0 unless overridden here. Verify by reading
-    # `VisMem-Diag/data/vismem_diag/vwa_cache/<cat>/<NN>.jpg` and
+    # `data/vismem_diag/vwa_cache/<cat>/<NN>.jpg` and
     # `manifest.txt` in that directory.
     PREFERRED_INDEX: dict[str, int] = {
         # chairs/00.jpg is "Cup Holder Coaster" — not a chair.

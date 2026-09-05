@@ -54,8 +54,8 @@ def snapshot_before_write(target: Path, tag: str | None) -> Path | None:
     if not target.exists():
         return None
     # The driver writes via the symlinked path
-    # (VisMem-Diag/env/frontend/public/images/...). Resolve to the
-    # real filesystem location (VisMem-Diag/data/vismem_diag/images/...)
+    # (env/frontend/public/images/...). Resolve to the
+    # real filesystem location (data/vismem_diag/images/...)
     # so `relative_to(LIVE_ROOT)` succeeds. Without this resolve, the
     # symlinked path doesn't sit under LIVE_ROOT and snapshot is
     # silently skipped — that's the 2026-05-15 Qwen-smoke bug where

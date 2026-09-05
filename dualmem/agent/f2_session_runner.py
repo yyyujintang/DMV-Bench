@@ -1,14 +1,20 @@
-"""Family-2 task runner — Long-Horizon Online IC Injection (advisor's final design).
+"""Incidental-Cue task runner.
 
-Runs ONE Family-2 task = a linear spine of D sessions sharing ONE accumulating
-memory bank. Each session is a scripted browse walk that injects one cue online
-(the base product image is cue-edited at run time via NanoBanana). After each
-session, eval-only RECALL PROBES are run from the current bank state — they are
-read-only (retrieve + navigate, no `bank.encode`) so they do not perturb the
-spine. There is NO tree and NO bank snapshot/restore: the bank simply persists.
+One task is a linear chain of D sessions that share a single accumulating
+memory bank. The encoding trajectories are produced separately (see
+`f2_encode_agent`) and are replayed here into whichever memory system is under
+test, so every system sees an identical observation stream.
 
-This module does NOT touch `dmvbench_live_runner.run_dmvbench_live` (Family 1
-must stay byte-identical) — it imports that runner's stable helpers only.
+After each session is replayed, eval-only RECALL PROBES run from the current
+bank state. Probes are read-only -- they retrieve and navigate but never call
+`bank.encode` -- so they cannot perturb the chain. There is no branching and no
+bank snapshot/restore: the bank simply persists across the chain.
+
+Cues are baked into the catalog images at build time (the storefront serves
+`images/with_cue/...`), so nothing is edited at run time.
+
+This module imports stable helpers from `dualmem.agent.prompting` (the shared
+system prompt, observation type and retrieval/prompt formatting).
 """
 from __future__ import annotations
 
@@ -18,33 +24,16 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
 
-import random as _random
-
 from dualmem.agent.actions import Action, parse_react_response
-from dualmem.agent.dmvbench_live_runner import (
+from dualmem.agent.prompting import (
     SYSTEM_PROMPT_TEMPLATE, Observation, PRODUCT_RE, _bank_has_slug,
     _build_prompt, _format_memory_payload, _retrieve_step,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 V2 = REPO_ROOT / "data" / "vismem_diag_v2"
-BASE_IMG_ROOT = V2 / "images" / "base"
-WITH_CUE_IMG_ROOT = V2 / "images" / "with_cue"   # v6: every product carries a baked-in cue
-ONLINE_CUE_ROOT = V2 / "images" / "online_cue_v2"    # disk cache of online edits
+WITH_CUE_IMG_ROOT = V2 / "images" / "with_cue"
 CUE_REGISTRY = V2 / "cue_registry.json"
-
-# The cue must be visible enough that a visual memory can actually encode it
-# (a too-small cue tests nothing) — but still a natural, plausibly-placed
-# everyday object that does not obscure the product.
-EDIT_PROMPT = (
-    "Add a {color} {obj} to this product photograph, {placement}. "
-    "The {obj} must be clearly visible and prominent — immediately noticeable "
-    "at a glance and occupying a meaningful portion of the frame, not a tiny "
-    "detail. At the same time it must look natural and photorealistic: a real "
-    "everyday object plausibly placed there, not covering or obscuring the "
-    "product itself. Keep the product and the background otherwise unchanged. "
-    "Photographic realism, no text, no watermark, no caption overlay."
-)
 
 _REGISTRY_CACHE: Optional[dict] = None
 
@@ -58,11 +47,11 @@ def _registry() -> dict:
     return _REGISTRY_CACHE
 
 
-def base_image_for(url_hash: str) -> Optional[Path]:
-    """Resolve a product url_hash to its WITH-CUE image (design v6: every
-    product on the storefront carries a unique baked-in cue from
-    `cue_registry.json`; the storefront serves these images, so observations
-    are with_cue everywhere). The name is kept for back-compat with imports."""
+def image_for(url_hash: str) -> Optional[Path]:
+    """Resolve a product url_hash to the image the storefront serves for it.
+
+    Every product carries a unique cue baked in at build time, so this is
+    always the `with_cue` render -- byte-identical to the photo on the page."""
     r = _registry().get(url_hash)
     if not r:
         return None
@@ -70,30 +59,26 @@ def base_image_for(url_hash: str) -> Optional[Path]:
     return p if p.exists() else None
 
 
-def _safe(s: str) -> str:
-    return re.sub(r"[^a-zA-Z0-9]+", "_", s).strip("_")
+# Kept as an alias: `f2_encode_agent` and external scripts import this name.
+base_image_for = image_for
 
 
 def _f2_obs(url: str) -> Observation:
-    """Family-2 observation: a product page shows its CLEAN base image."""
+    """The agent's view of the current page.
+
+    `title` and `description` are deliberately set to the URL rather than to
+    scraped DOM text: the harness does not read the page's DOM, so the only
+    textual signal about the current page is its address. This is uniform
+    across every memory system, so it cannot bias a comparison between them.
+    On a product page the agent additionally receives the product image; other
+    page types carry no image.
+    """
     m = PRODUCT_RE.match(url)
     if m:
-        bp = base_image_for(m.group(1))
+        bp = image_for(m.group(1))
         return Observation(url=url, image_path=(str(bp) if bp else ""),
                            title=url, description=url)
     return Observation(url=url, image_path="", title=url, description=url)
-
-
-@dataclass
-class InjectionGT:
-    """Ground truth recorded when a cue is injected at run time."""
-    cue_id: str
-    cue_object: str
-    cue_color: str
-    product_url_hash: str
-    product_url: str
-    injection_step: int
-    cued_image_path: str
 
 
 @dataclass
@@ -113,51 +98,14 @@ class ProbeResult:
 class F2TaskResult:
     task_id: str
     system: str
-    injections: Dict[int, InjectionGT] = field(default_factory=dict)   # session_idx -> GT
     probes: List[ProbeResult] = field(default_factory=list)
     total_vlm_calls: int = 0
-
-
-def online_cue_edit(base_path: Path, cue_object: str, cue_color: str,
-                    placement: str, out_path: Path, nano_banana) -> Path:
-    """Edit a cue onto a base image (cached on disk). Returns the cued image path."""
-    if out_path.exists():
-        return out_path
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    prompt = EDIT_PROMPT.format(color=cue_color, obj=cue_object, placement=placement)
-    with open(base_path, "rb") as f:
-        ref = f.read()
-    part = nano_banana._types.Part.from_bytes(data=ref, mime_type="image/png")
-    img = nano_banana._call([prompt, part])
-    img.convert("RGB").save(out_path)
-    return out_path
 
 
 def _rel(url: str, base_url: str) -> str:
     if base_url in url:
         url = url.split(base_url, 1)[-1] or "/"
     return url.split("?")[0]
-
-
-def _cue_phrase(cue_id: str) -> str:
-    """'wool scarf::red' -> 'red wool scarf'."""
-    obj, _, col = cue_id.partition("::")
-    return f"{col} {obj}" if col else obj
-
-
-def _build_walk(task_id: str, session_idx: int, shopping_list: list,
-                max_steps: int) -> list:
-    """Deterministic scripted browse walk for one session: `max_steps` distinct
-    product url_hashes drawn from the session's shopping-list categories."""
-    rng = _random.Random(f"f2walk.{task_id}.{session_idx}")
-    by_cat: dict = {}
-    for uh, r in _registry().items():
-        by_cat.setdefault(r["cat"], []).append(uh)
-    pool: list = []
-    for cat in shopping_list:
-        pool += by_cat.get(cat, [])
-    rng.shuffle(pool)
-    return pool[:max_steps]
 
 
 def _exec_action(page, action: Action, base_url: str, log: list):
@@ -214,59 +162,6 @@ def _exec_action(page, action: Action, base_url: str, log: list):
 
 
 # ---------------------------------------------------------------------------
-# Spine: scripted browse walk (encoding, VLM-free) — injects one cue.
-# ---------------------------------------------------------------------------
-
-def _run_session_walk(task, sess, system, nano_banana, log: list) -> Optional[InjectionGT]:
-    """Scripted browse walk for one session. Encodes products into the (shared,
-    persistent) bank; injects the session's single cue at its injection_step."""
-    inj = sess.injection
-    walk = _build_walk(task.task_id, sess.session_idx, sess.shopping_list,
-                       task.max_steps_per_session)
-    caption_fn = getattr(system, "caption_fn", None)
-    n_before = len(system.bank.entries())
-    gt: Optional[InjectionGT] = None
-    for step, uh in enumerate(walk, start=1):
-        base_img = base_image_for(uh)
-        img_path = str(base_img) if base_img else ""
-        cat = _registry().get(uh, {}).get("cat", "item")
-        injected_now = False
-        if gt is None and step >= inj.injection_step and base_img is not None:
-            out = ONLINE_CUE_ROOT / f"{_safe(inj.cue_id)}__{uh}.png"
-            try:
-                cued = online_cue_edit(base_img, inj.cue_object, inj.cue_color,
-                                       inj.cue_placement, out, nano_banana)
-                img_path = str(cued)
-                gt = InjectionGT(
-                    cue_id=inj.cue_id, cue_object=inj.cue_object,
-                    cue_color=inj.cue_color, product_url_hash=uh,
-                    product_url=f"/product/{uh}", injection_step=step,
-                    cued_image_path=str(cued))
-                injected_now = True
-                log.append(f"  [S{sess.session_idx} walk {step}] INJECTED "
-                           f"{inj.cue_id} onto /product/{uh}")
-            except Exception as e:
-                log.append(f"  [S{sess.session_idx} walk {step}] edit failed: {e}")
-        # Encode unless already banked — BUT the injection target must be
-        # (re-)encoded with the CUED image even if a base entry exists from an
-        # earlier session, else the cue is invisible to memory.
-        if injected_now or not _bank_has_slug(system, uh):
-            cap = caption_fn(img_path) if (caption_fn and img_path) else None
-            try:
-                system.bank.encode(image_path=img_path, slug=uh,
-                                   encode_text=f"a {cat.replace('_', ' ')}",
-                                   caption=cap)
-            except Exception as e:
-                log.append(f"  [S{sess.session_idx} walk {step}] encode fail {uh}: {e}")
-    added = len(system.bank.entries()) - n_before
-    if gt is None:
-        log.append(f"  [S{sess.session_idx}] WARNING: injection never placed")
-    log.append(f"  [S{sess.session_idx}] walk: {len(walk)} products, bank +{added}, "
-               f"size={len(system.bank.entries())}")
-    return gt
-
-
-# ---------------------------------------------------------------------------
 # Recall probe: eval-only, read-only side-run scored by url_match.
 # ---------------------------------------------------------------------------
 
@@ -274,17 +169,15 @@ def _run_recall_probe(probe, system, vlm, target_url: Optional[str], *,
                       base_url: str, playwright_page, recall_steps: int,
                       log: list):
     """One eval-only recall probe. The agent navigates from `/` to the product
-    carrying `probe.target_cue_id`; scored by url_match. Does NOT mutate the bank.
-    v6: the probe carries the (object, color) directly (every visited product
-    has a baked-in cue), so the cue phrase is built from those structured fields.
+    carrying `probe.target_cue_id`; scored by url_match. Does NOT mutate the
+    bank. The probe carries the cue's (object, colour) as structured fields, so
+    the phrase shown to the agent is built directly from those.
 
     Returns (ProbeResult, playwright_page) — `playwright_page` may be a NEW page
     if the old one crashed mid-probe and was recovered. The caller MUST update
     its reference: `pr, page = _run_recall_probe(...)`, otherwise subsequent
     probes will keep hitting the dead page."""
-    obj = getattr(probe, "target_cue_object", None)
-    col = getattr(probe, "target_cue_color", None)
-    cue_phrase = (f"{col} {obj}" if (obj and col) else _cue_phrase(probe.target_cue_id))
+    cue_phrase = f"{probe.target_cue_color} {probe.target_cue_object}"
     log.append(f"  --- PROBE {probe.probe_id} reach-{probe.reach} "
                f"cue={probe.target_cue_id} gt={target_url} ---")
     # Recover from a page that died at the end of the PREVIOUS probe before
@@ -384,13 +277,13 @@ def _run_recall_probe(probe, system, vlm, target_url: Optional[str], *,
 
 
 # ---------------------------------------------------------------------------
-# Whole-task driver: linear spine + probes.
+# Whole-task driver: replay the chain, probe after every session.
 # ---------------------------------------------------------------------------
 
 def _replay_trajectory(traj, system, log: list) -> None:
-    """Encode a recorded encoding-session trajectory into the (persistent) bank.
-    Design v6: every visited product is encoded with its WITH-CUE image (the
-    cue is baked into the storefront), so there is no per-cue special case."""
+    """Encode a recorded encoding-session trajectory into the (persistent)
+    bank. Every visited product is encoded with the image the storefront served
+    for it, cue included, so there is no per-cue special case."""
     caption_fn = getattr(system, "caption_fn", None)
     n_before = len(system.bank.entries())
     # Tell session-aware adapters (e.g. WorldMM-lite multi-grain) which
@@ -415,7 +308,7 @@ def _replay_trajectory(traj, system, log: list) -> None:
 
 
 def run_f2_task(
-    task,                       # RolloutTreeTask (linear spine + probes)
+    task,                       # ChainTask: the D-session chain + its probes
     system,                     # a fresh MemorySystem
     vlm,
     *,
@@ -428,8 +321,8 @@ def run_f2_task(
     mc_probes: int = 0,         # > 0 → Monte Carlo sampling at probe-build time
     mc_seed: str = "f2.mc.default",
 ) -> F2TaskResult:
-    """Run one whole Family-2 task for one memory system: replay the recorded
-    encoding trajectories into the bank, then run the recall probes.
+    """Run one whole task for one memory system: replay the recorded encoding
+    trajectories into the bank, then run the recall probes.
 
     `mc_probes > 0` switches probe construction from exhaustive
     (`k·N(N-1)/2`) to Monte Carlo (`~mc_probes × (N-1)`), enabling
@@ -443,14 +336,15 @@ def run_f2_task(
             log_path.parent.mkdir(parents=True, exist_ok=True)
             log_path.write_text("\n".join(log))
 
-    log.append(f"=== F2 task={task.task_id} system={system.name} "
+    log.append(f"=== task={task.task_id} system={system.name} "
                f"D={task.n_sessions} ===")
     system.reset()
     result = F2TaskResult(task_id=task.task_id, system=system.name)
     traj_by_idx = {t.session_idx: t for t in trajectories}
 
-    # v6: fill probes at run time from the recorded encoding trajectories
-    # (one probe per (at_session j, target_session, viewed product)).
+    # Probes are filled at run time from the recorded trajectories -- which
+    # products the agent saw is autonomous, so they cannot be fixed in advance.
+    # One probe per (probe session j, target session, product viewed there).
     if not task.probes:
         from tasks.generators.f2_online_ic import build_probes_from_trajectories
         traj_visits = {j: traj_by_idx[j].visited for j in traj_by_idx}

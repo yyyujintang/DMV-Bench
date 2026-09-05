@@ -1,11 +1,12 @@
-"""Family-2 metrics — aggregate a spine+probes run (advisor's final design).
+"""Incidental-Cue metrics.
 
-Consumes `{system_name: [F2TaskResult, ...]}` (one F2TaskResult per task spine)
-and reports:
-  - R@reach — recall accuracy at each reach (sessions back the cue was injected).
-    This SR-vs-reach retention curve is the headline long-horizon result.
-  - task_SR — fraction of task spines on which EVERY recall probe is correct.
-  - inj_ok — fraction of expected cues the online edit actually placed.
+Consumes `{system_name: [F2TaskResult, ...]}` (one result per chain) and
+reports task success rate (TSR), overall and stratified by recall reach -- the
+number of session boundaries between the visit and the probe. The SR-vs-reach
+retention curve is the headline long-horizon result.
+
+A recall probe IS the task, so TSR is simply the fraction of probes whose final
+`navigate` matched the ground-truth product URL exactly.
 """
 from __future__ import annotations
 
@@ -17,22 +18,16 @@ from typing import Dict, List
 
 def aggregate_f2(tasks: List, results_by_system: Dict[str, List],
                  out_dir: Path | None = None) -> str:
-    """Build the Family-2 summary table. Returns it as text; writes CSV if out_dir."""
+    """Build the summary table. Returns it as text; writes CSVs if out_dir."""
     max_reach = max((p.reach for t in tasks for p in t.probes), default=0)
-    expected_cues = sum(t.n_sessions for t in tasks)
     rows = []
-    # A recall (cue -> url_match) IS the task. SR = success over all recall
-    # tasks; R@reach = SR by reach. (chain_SR removed — uninformative at scale.)
-    hdr = (f"{'system':14s}{'SR':>8s}{'inj_ok':>8s}"
-           f"{'n_recall':>10s}"
+    hdr = (f"{'system':14s}{'SR':>8s}{'n_recall':>10s}"
            + "".join(f"{'R@r' + str(r):>8s}" for r in range(1, max_reach + 1)))
     lines = [hdr, "-" * len(hdr)]
 
     for system in sorted(results_by_system):
         task_results = results_by_system[system]
         all_probes = [p for tr in task_results for p in tr.probes]
-        placed = sum(len(tr.injections) for tr in task_results)
-        inj_ok = placed / expected_cues if expected_cues else 1.0
         overall = (mean(1.0 if p.correct else 0.0 for p in all_probes)
                    if all_probes else 0.0)
         per_reach = []
@@ -41,10 +36,9 @@ def aggregate_f2(tasks: List, results_by_system: Dict[str, List],
                     for p in all_probes if p.reach == reach]
             per_reach.append(mean(vals) if vals else -1.0)
         lines.append(f"{system:14s}{overall * 100:>7.1f}%"
-                     f"{inj_ok * 100:>7.1f}%{len(all_probes):>10d}"
+                     f"{len(all_probes):>10d}"
                      + "".join(f"{v * 100:>7.1f}%" for v in per_reach))
         rows.append({"system": system, "SR": round(overall, 4),
-                     "injection_placed": round(inj_ok, 4),
                      "n_recall_tasks": len(all_probes),
                      **{f"recall_at_reach_{r}": round(per_reach[r - 1], 4)
                         for r in range(1, max_reach + 1)}})

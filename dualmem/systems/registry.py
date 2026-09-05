@@ -1,19 +1,31 @@
-"""System factory — composes (encoder, bank, retriever, injector) into named baselines.
+"""System factory: composes (encoder, bank, retriever, injector) into the
+named memory architectures.
 
-Six baselines mapped to Proposal_A nomenclature:
+A memory architecture is exactly three choices -- what the bank stores
+(ENCODE), how a recall query is matched against it (RETRIEVE), and what is
+re-presented to the VLM (INJECT). Every system below is a point in that space,
+so a gap between two of them is attributable to the axis they differ on.
 
-| System name  | Encoder(s)        | Bank   | Retriever                | Injector    | Caption fn? |
-|---|---|---|---|---|---|
-| TextOnly     | SBERT (text-only) | verbal | TextRetriever (SBERT)    | text_only   | no          |
-| Caption      | SBERT             | verbal | TextRetriever (SBERT)    | caption_only| yes (VLM)   |
-| RawImage     | none              | visual | MostRecent               | image_only  | no          |
-| DualChannel  | SBERT + CLIP-V    | dual   | HybridRetriever          | image_text  | yes (VLM)   |
-| CoMEM        | CLIP (aligned)    | visual | VisualRetriever(text)    | image_only  | no          |
-| HYMEM        | CLIP + SBERT      | dual   | HybridRetriever          | image_text  | yes (VLM)   |
+The seven architectures reported in the paper:
 
-`make_system(name, vlm_caption_fn=…)` returns a fully-constructed system.
-For CI / tests, use `name="TextOnly_stub"` etc. — those map to stub-encoder
-variants so no model downloads are needed.
+| System        | Encode              | Retrieve                 | Inject        |
+|---------------|---------------------|--------------------------|---------------|
+| NoMemory      | (none)              | (none)                   | (none)        |
+| TextOnly      | product-class text  | SBERT cosine             | text          |
+| Caption       | VLM caption         | SBERT cosine             | caption       |
+| WorldMM-lite  | episodic+sem+visual | adaptive iterative       | retrieved ctx |
+| MMA-lite      | items + reliability | reliability-weighted     | text          |
+| M2A-lite      | raw + semantic      | dense + BM25 + visual    | text          |
+| DualMem       | image + caption     | hybrid (SigLIP-2, SBERT) | image+caption |
+
+`DualMem-a75` (alpha=0.75, visual-dominant fusion) is the headline
+configuration; the other `DualMem-*` names vary one axis each for the ablation
+table. `DualChannel*` are the intermediate variants used to decompose the
+DualMem-vs-M2A gap into fusion-rule and encoder effects.
+
+`make_system(name, vlm_caption_fn=...)` returns a fully-constructed system.
+Pass `text_encoder_name="stub"` / `visual_encoder_name="stub"` in tests to
+avoid model downloads.
 """
 
 from __future__ import annotations
@@ -238,8 +250,8 @@ class _FullDumpRetriever:
 
 
 def _ext(name: str, **kw):
-    """Defer the import — external_wrap imports dualmem.baselines.registry
-    which imports the external adapters, which can be heavy.
+    """Defer the import — external_wrap pulls in the external adapters,
+    which can be heavy.
     Forwards `vlm_caption_fn` so `-text` variants can carry the F2 caption."""
     from dualmem.systems.external_wrap import make_external_system
     return make_external_system(name, vlm_caption_fn=kw.get("vlm_caption_fn"))
