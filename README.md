@@ -1,4 +1,4 @@
-# DMV-Bench: Diagnosing Long-Horizon Multimodal Agents' Visual Memory with Incidental Cue Injection
+# [EMNLP2026 Main] DMV-Bench: Diagnosing Long-Horizon Multimodal Agents' Visual Memory with Incidental Cue Injection
 
 Code release accompanying the paper *DMV-Bench: Diagnosing Long-Horizon
 Multimodal Agents' Visual Memory with Incidental Cue Injection*. This
